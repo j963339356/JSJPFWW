@@ -1,5 +1,32 @@
 var Cunion = {}
 
+Cunion.bendi = function(){
+	//市级赋值
+	$.each(city, function(k, p) {
+		var option = "<option value='" + p.ID + "'>" + p.NAME + "</option>";
+		$("#city").append(option);
+	});
+
+	//市级选择
+	$("#city").change(function() {
+		var selValue = $(this).val();
+		$("#hidCityName").val($(this).find("option:selected").text());
+		$("#CountyName option:gt(0)").remove();
+
+		$.each(county, function(k, p) {
+			if (p.PARENT_ID == selValue) {
+				var option = "<option value='" + p.ID + "'>" + p.NAME + "</option>";
+				$("#county").append(option);
+			}
+		});
+
+	});
+	//区县级选择
+	$("#county").change(function() {
+		var selValue = $(this).val();
+		$("#hidCountyName").val($(this).find("option:selected").text());
+	});
+}
 /*根据省获取市县*/
 Cunion.getCity = function (id) {
     var citybody = { "Province": "广东" };
