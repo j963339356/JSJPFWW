@@ -1,5 +1,6 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="zh-cn">
+
 
 <head>
 
@@ -21,6 +22,7 @@
     <script src="../../../StaticResource/Theme2/Js/conwin.helper.js"></script>
     <script src="../../../StaticResource/Theme2/Js/jquery.cokie.min.js"></script>
     <script src="../../../StaticResource/Theme2/Js/layer/layer.js"></script>
+    <script src="../Info/Js/IsLogin.js"></script>
 </head>
 
 <body>
@@ -29,6 +31,7 @@
         <script>
             var ctx = '';
             $(function () {
+                checkLogin();
                 var currentNode = 3;
                 $("#nav_content>li").each(function (index) {
                     if ((index + 1) == currentNode) {
@@ -43,17 +46,6 @@
                     $(this).children('ul').stop().slideToggle();
                 });
             });
-            //页面加载完毕执行的JS
-            //根据cookie判断用户是否已经登录
-            $(function () {
-                if (!$.trim($.cookie('name')) && !$.trim($.cookie('token'))) {// 
-                    $('.login_in').css("display", "block");
-                    $('.login_already').css("display", "none");
-                } else {
-                    $('.login_in').css("display", "none");
-                    $('.login_already').css("display", "block");
-                }
-            });
 
         </script>
         <div class="nav">
@@ -63,19 +55,18 @@
                     <p>广东省驾驶培训公众服务网</p>
                     <p>Guangdong driving and training public service network</p>
                 </div>
-                <div class="login_in" style="overflow: hidden;display:block ;">
-                    <div class="The-login"><a href="Modules/JPJSGZFW/Student/StudentLogin.html">学员服务</a></div>
+                <div class="login_in">
+                    <!--<div class="The-login"><a href="../Student/StudentLogin.html">学员服务</a></div>
                     <div class="The-login"><a href="#">驾校服务</a></div>
-                    <div class="The-login"><a href="#">管理部门登录</a></div>
+                    <div class="The-login"><a href="#">管理部门登录</a></div>-->
                 </div>
-
                 <div class="login_already" style="display: none;width: 300px; height: 53px; float:right; ">
                     <div style="display: inline-block; margin-top: 25px;font-size: 15px;">
                         欢迎您：
                         <a href="#"><span style="font-weight: bold; color:#000000;" id='user_name'>李世民</span></a>
                     </div>
-                    <div class="The-login"><a href="#">退出登录</a></div>
-                </div>
+                    <div class="The-login" onclick="inValidate()"><a href="#">退出登录</a></div>
+                </div>	
             </div>
             <div class="nav_b">
                 <ul id="nav_content">
