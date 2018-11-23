@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+﻿<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!doctype html>
 <html>
@@ -15,6 +15,7 @@
 	<jsp:include page="header.jsp">
 		<jsp:param value="3" name="currentNode"/>
 	</jsp:include>
+
 </header>
 <!--头部-->
 <div class="driver-details">
