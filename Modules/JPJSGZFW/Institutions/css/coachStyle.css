@@ -1,0 +1,66 @@
+/*教练车列表里每一条记录,为了解决内容超出范围的问题，原先使用的是StaticResource/Css/style.css*/
+.driver .list .cziliao{	
+	float: left;
+	margin-left: 10px;
+	width: 172px;
+}
+
+.driver .list .cziliao p{
+	/*display: inline-block;*/	
+	font-size: 14px;
+	color: #666;
+	height: 33px; 
+	margin-top: 2px;
+}
+
+.driver .list .cziliao p:nth-of-type(1){	
+	font-weight: bold;
+	color: #28689a;
+	height: 30px;
+}
+
+.driver .list .cziliao p:nth-of-type(2){	
+	line-height: 19px;
+}
+
+.driver .list .cziliao p:nth-of-type(3){	
+	margin-top: 19px;
+	line-height: 19px;
+}
+
+.driver .list .cziliao p:nth-of-type(4){	
+	margin-top:2px;
+}
+
+/**********分页************/
+
+.cflip{	
+	text-align: center;
+	float: none;
+	font-size: 14px;
+}
+
+.cflip span{	
+	padding: 1px 6px;
+	border: 1px solid #AAE;
+	color: #158;
+	display: inline-block;
+	font-size: 14px;
+}
+
+/*解决输入框中间的小方块问题，但是可能无法和其他内容对齐*/
+/* .cflip input{
+	display: inline-block;
+	margin-right: 2px;
+	width: 36px;
+	height: 22px;
+	border: 1px solid #AAE;
+	position: relative;
+	top:-0.5px;
+} */
+
+.cflip-currtent{	
+	background:#226688;
+	color: #FFF;
+}
+

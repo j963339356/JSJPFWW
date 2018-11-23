@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>教练车详情</title>
+
+    <link href="../../../StaticResource/Theme2/Css/style.css" rel="stylesheet" />
+    <script src="../../../StaticResource/Theme2/Js/jquery-1.10.2.min.js"></script>
+    <script src="../../../StaticResource/Theme2/Js/conwin.helper.js"></script>
+    <script src="../../../StaticResource/Theme2/Js/jquery.cokie.min.js"></script>
+    <script src="../../../StaticResource/Theme2/Js/layer/layer.js"></script>
+    <script>
+        /*通过id获取教练车详情*/
+        !function () {
+            var reg = new RegExp("(^|&)id=([^&]*)(&|$)");
+            var r = window.location.search.substr(1).match(reg);
+            var id = unescape(r[2]);
+            var body = {
+                "id": id
+            }
+            CwHelper.Ajax("004300100041", body, function (result) {
+                var data = result.body;
+                var ulhtml = "";
+                $(data).each(function () {
+                    nullTo(this);
+                    ulhtml += '<p style="color:blue">&nbsp;' + this.corp_name + '</p>'
+                        + '<ul><li><span>&nbsp;教练车编号：</span>' + this.car_num + '</li>'
+                        + '<li><span>&nbsp;车辆品牌：</span>' + this.brand + '</li>'
+                        + '<li><span>&nbsp;车辆牌号：</span>' + this.licnum + '</li>'
+                        + '<li><span>&nbsp;车牌颜色：</span>' + numColor(this.plate_color) + '</li>'
+                        + '<li><span>&nbsp;车辆型号：</span>' + this.model + '</li>'
+                        + '<li><span>&nbsp;培训车型：</span>' + this.perdri_type + '</li>'
+                        + '<li><span>&nbsp;购买日期：</span>' + buyDate(this.buy_date) + '</li>'
+                        + '<li><span>&nbsp;生产厂家：</span>' + this.manufacture + '</li>'
+                        + '</ul>';
+                });
+                $("#details").html(ulhtml);
+            }, false);
+        }();
+
+        /*日期只要年月日，不要后面的时间*/
+        function buyDate(buy_date) {
+            return buy_date.substr(0, 10);
+        };
+        /*颜色*/
+        function numColor(platecolor) {
+            if (platecolor == 1) return "蓝色";
+            else if (platecolor == 2) return "黄色";
+            else if (platecolor == 3) return "黑色";
+            else if (platecolor == 4) return "白色";
+            else if (platecolor == 5) return "绿色";
+            else if (platecolor == 9) return "其他";
+            else return "";
+        }
+        /*遍历对象，null值转为空字符串*/
+        function nullTo(obj) {
+            for (var i in obj) {
+                if (obj[i] == null) {
+                    obj[i] = "";
+                }
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+    <!-- 顶部 -->
+    <header>
+        <script>
+            var ctx = '';
+            $(function () {
+                var currentNode = 3;
+                $("#nav_content>li").each(function (index) {
+                    if ((index + 1) == currentNode) {
+                        $(this).addClass("current");
+                    } else {
+                        $(this).removeClass("current");
+                    }
+                });
+            });
+            $(function () {
+                $('#nav_content>li').hover(function (e) {
+                    $(this).children('ul').stop().slideToggle();
+                });
+            });
+            //页面加载完毕执行的JS
+            //根据cookie判断用户是否已经登录
+            $(function () {
+                if (!$.trim($.cookie('name')) && !$.trim($.cookie('token'))) {// 
+                    $('.login_in').css("display", "block");
+                    $('.login_already').css("display", "none");
+                } else {
+                    $('.login_in').css("display", "none");
+                    $('.login_already').css("display", "block");
+                }
+            });
+
+        </script>
+        <div class="nav">
+            <div class="nav_in">
+                <h1><img src="../../../StaticResource/Theme2/Img/bg.png" alt=""></h1>
+                <div class="mz">
+                    <p>广东省驾驶培训公众服务网</p>
+                    <p>Guangdong driving and training public service network</p>
+                </div>
+                <div class="login_in" style="overflow: hidden;display:block ;">
+                    <div class="The-login"><a href="Modules/JPJSGZFW/Student/StudentLogin.html">学员服务</a></div>
+                    <div class="The-login"><a href="#">驾校服务</a></div>
+                    <div class="The-login"><a href="#">管理部门登录</a></div>
+                </div>
+
+                <div class="login_already" style="display: none;width: 300px; height: 53px; float:right; ">
+                    <div style="display: inline-block; margin-top: 25px;font-size: 15px;">
+                        欢迎您：
+                        <a href="#"><span style="font-weight: bold; color:#000000;" id='user_name'>李世民</span></a>
+                    </div>
+                    <div class="The-login"><a href="#">退出登录</a></div>
+                </div>
+            </div>
+            <div class="nav_b">
+                <ul id="nav_content">
+                    <li class="current"><a href="../../../Index.html">首页</a></li>
+                    <li><a href="../Info/Statute.html">政策法规</a></li>
+                    <li><a href="">驾校信息公开</a>
+                        <ul class="lst">
+                            <li><a href="ServiceNavigation.html">服务导航</a></li>
+                            <li><a href="Institutions.html">驾校查询</a></li>
+                            <li><a href="Coaches.html">教练员查询</a></li>
+                            <li><a href="CoachCar.html">教练车查询</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../Info/News.html">通知公告</a></li>
+                    <li><a href="../Info/BusinessGuide.html">业务指南</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <div class="driver-details vehicle" style="height:602px;">
+        <div class="driver_in">
+            <div class="driver_t">
+                <p>
+                    <a href="../../../Index.html">首页</a>><a href="CoachCar.html">教练车查询</a>><a href="#">教练车详情</a>
+                </p>
+            </div>
+        </div>
+        <div class="details">
+            <div class="details-l">
+                <img id="photofile" src="../../../StaticResource/Theme2/Img/noimage.jpg" style="width:420px; height:320px;">
+            </div>
+            <div class="details-r" id="details">
+                <!-- <p style="color:blue">&nbsp;汕头市明宏汽车驾驶员培训有限公司</p>
+                <ul>
+                    <li><span>&nbsp;教练车编号：</span></li>
+                    <li><span>&nbsp;车辆品牌：</span></li>
+                    <li><span>&nbsp;车辆牌号：</span></li>
+                    <li><span>&nbsp;车辆颜色：</span></li>
+                    <li><span>&nbsp;车辆型号：</span></li>
+                    <li><span>&nbsp;培训车型：</span></li>
+                    <li><span>&nbsp;购买日期：</span></li>
+                    <li><span>&nbsp;生产厂家：</span></li>
+                </ul> -->
+            </div>
+        </div>
+    </div>
+
+    <!--底部-->
+    <footer>
+        <div class="footer">
+            <div class="footer_in">
+                <div class="lianjie">
+                    <h2>友情链接</h2>
+                    <ul>
+                        <li><a href="http://www.mot.gov.cn/" target="_blank">中华人民共和国交通运输部</a></li>
+                        <li><a href="http://www.mps.gov.cn/" target="_blank">中华人民共和国公安部</a></li>
+                        <li><a href="http://gd.122.gov.cn/" target="_blank">交通安全综合服务管理平台</a></li>
+                        <li><a href="https://www.cttic.cn/" target="_blank">中国交通通信信息中心</a></li>
+                        <li><a href="http://www.crta.org.cn/" target="_blank">中国道路运输协会</a></li>
+                    </ul>
+                    <p>版权所有<br>© copyright 2010-2018. All rights reserved. <a href="http://www.miitbeian.gov.cn" target="_blank">粤ICP备09171042号-4</a></p>
+                </div>
+                <div class="erweima">
+                    <img src="../../../StaticResource/Theme2/Img/erweima.png" width="100" height="102" alt="">
+                    <p>扫一扫<br>关注微信公众号</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

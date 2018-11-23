@@ -1,0 +1,225 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>广东省驾驶培训公众服务网</title>
+<link rel="stylesheet" href="StaticResource/Theme2/css/style.css" type="text/css">
+</head>
+<body class="bjs">
+<!--头部-->
+<header>
+	<div class="nav">
+		<div class="nav_in">
+			<h1><img src="StaticResource/Theme2/Img/bg.png" alt=""></h1>
+			<div class="mz">
+				<p>广东省驾驶培训公众服务网</p>
+				<p>Guangdong driving and training public service network</p>
+			</div>        
+			<div class="login_in">
+				<div class="The-login"><a href="Modules/JPJSGZFW/Student/StudentLogin.html">学员服务</a></div>
+				<div class="The-login"><a href="#">驾校服务</a></div>
+				<div class="The-login"><a href="#">管理部门登录</a></div>
+			</div>
+		</div>
+		<div class="nav_b">
+			<ul id="nav_content">
+				<li class="current"><a href="Index.html">首页</a></li>
+				<li><a href="Modules/JPJSGZFW/Info/Statute.html">政策法规</a></li>
+				<li><a href="">驾校信息公开</a>
+					<ul class="lst">  
+						<li><a href="Modules/JPJSGZFW/Institutions/ServiceNavigation.html">服务导航</a></li>
+						<li><a href="Modules/JPJSGZFW/Institutions/Institutions.html">驾校查询</a></li>
+						<li><a href="Modules/JPJSGZFW/Institutions/Coaches.html ">教练员查询</a></li>
+						<li><a href="Modules/JPJSGZFW/Institutions/CoachCar.html">教练车查询</a></li>
+					</ul>    			
+				</li>	
+				<li><a href="Modules/JPJSGZFW/Info/News.html">通知公告</a></li>
+				<li><a href="Modules/JPJSGZFW/Info/BusinessGuide.html">业务指南</a></li>
+			</ul>
+		</div>
+	</div>
+</header>
+
+<!--头部-->
+<div class="header">
+	<div class="header_in">
+		<div class="header_l"><p>广东省转发公安厅交通运输厅</p></div>
+		<div class="header_c gonggao">
+	    	<div class="header_ct">
+	        	<h2 class="ywzn">通知公告</h2>
+	            <a href="Modules/JPJSGZFW/Info/News.html">更多></a>
+	        </div>
+	    	<div class="header_cb">
+	        	<ul id="rule">
+        			<!--
+	        			<li>
+						<input type="hidden" name="id" value="63" >
+						<a href="announcement.html?type=1&sid=63">我的测试</a><span>2018-09-27</span></li>
+	        		
+	        			<li>
+						<input type="hidden" name="id" value="48" >
+						<a href="announcement.html?type=1&sid=48">0001</a><span>2018-04-21</span></li>
+        			-->
+	        	</ul>
+	        </div>
+	    </div>		
+        <div class="header_r">
+            <div class="chaxun">信息查询</div>
+            <div class="fenglei">
+                <span class="span_in">驾校</span>
+                <span>教练员</span>
+                <span>教练车</span>
+            </div>
+            <div class="xuanzhe">
+                <ul>
+                	<!-- 驾校查询 -->
+                    <li>
+                    <form id ="queryCorpForm" action="#">
+                     <div class="xzsq">
+                            <p>选择市区</p>
+                            <select name="city" id="city">
+                                <option value="">请选择市区</option>
+                            </select>
+                        </div>
+                        <div class="xzxq">
+                            <p>选择县区</p>
+                            <select name="county" id="county">
+                                <option value="">请选择县区</option>
+                            </select>
+                        </div>
+                        <div class="jxmc">
+                            <p>驾校名称</p>
+                            <input type="text" name="corp" id="corp" placeholder="请输入驾校">
+                        </div>
+                     <div class="cx" id="queryCorp">查 询</div>
+                    </form>
+                    </li>
+                    
+                    <!-- 教练员查询 -->
+                    <li style="display:none">
+                     <form id ="queryCoachForm" action="#">
+                    	<div class="xzsq">
+                            <p>选择市区</p>
+                            <select name="coachCity" id="coachCity">
+                                <option value="">请选择市区</option>
+                            </select>
+                        </div>
+                        <div class="xzxq">
+                            <p>选择县区</p>
+                             <select name="coachCounty" id="coachCounty">
+                                <option value="">请选择县区</option>
+                            </select>
+                        </div>
+                        <div class="jxmc">
+                            <p>驾校名称</p>
+                            <input type="text" name="coachCorp" id="coachCorp" placeholder="请输入驾校">
+                        </div>
+                        <div class="jlmc">
+                            <p>教练员名称</p>
+                            <input type="text" name="coach" id="coach" placeholder="请输入教练员">
+                        </div>
+                        <div class="cx" id="queryCoach">查 询</div>
+                        </form>
+                    </li>
+                    
+                    <!-- 教练车查询 -->
+                    <li style="display:none">
+                    <form id ="queryCoachCarForm" action="#" method="post">
+                        <div class="xzsq">
+                            <p>选择市区</p>
+                            <select name="carCity" id="carCity">
+                                <option value="">请选择市区</option>
+                            </select>
+                        </div>
+                        <div class="xzxq">
+                            <p>选择县区</p>
+                            <select name="carCounty" id="carCounty">
+                                <option value="">请选择县区</option>
+                            </select>
+                        </div>
+                        <div class="jxmc">
+                            <p>驾校名称</p>
+                            <input type="text" name="carCorp" id="carCorp" placeholder="请输入驾校">
+                        </div>
+                        <div class="jlcp">
+                            <p>教练车牌号</p>
+                            <input type="text" name="coachCar" id="coachCar" placeholder="请输入车牌号">
+                        </div>
+                        <div class="cx" id="queryCoachCar" >查 询</div>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="content">
+	<div class="header_c zhengfa fagui">
+    	<div class="header_ct">
+        	<h2 class="zcfg">政策法规</h2>
+            <a href="Modules/JPJSGZFW/Info/Statute.html">更多></a>
+        </div>
+    	<div class="header_cb">
+        	<ul id="zcfg">
+	        	
+	        	<!--
+        			<li><input type="hidden" name="id" value="43" ><a href="announcement.html?type=2&sid=43">Test20180403政策法规信息发...</a><span>2018-04-03</span></li>
+        			<li><input type="hidden" name="id" value="26" ><a href="announcement.html?type=2&sid=26">测试重要性与时间排序</a><span>2017-11-07</span></li>
+	        	-->
+        	</ul>
+        </div>
+    </div>
+	<div class="header_c zhengfa">
+    	<div class="header_ct">
+        	<h2 class="ywzn">业务指南</h2>
+            <a href="Modules/JPJSGZFW/Info/businessGuide.html">更多></a>
+        </div>
+    	<div class="header_cb">
+        	<ul id="read">
+        		<!--
+        			<li><input type="hidden" name="id" value="23" ><a href="announcement.html?type=4&sid=23">应习近平邀请 美国总统特朗普将对中国进...</a><span>2017-11-02</span></li>
+        			<li><input type="hidden" name="id" value="32" ><a href="announcement.html?type=4&sid=32">20171113业务指南</a><span>2017-11-13</span></li>
+        		-->
+        	</ul>
+        </div>
+    </div>
+</div>
+<!--底部--> 
+<footer>
+	<div class="footer">
+		<div class="footer_in">
+			<div class="lianjie">
+				<h2>友情链接</h2>
+				<ul>
+					<li><a href="http://www.mot.gov.cn/" target="_blank">中华人民共和国交通运输部</a></li>
+					<li><a href="http://www.mps.gov.cn/" target="_blank">中华人民共和国公安部</a></li>
+					<li><a href="http://gd.122.gov.cn/" target="_blank">交通安全综合服务管理平台</a></li>
+					<li><a href="https://www.cttic.cn/" target="_blank">中国交通通信信息中心</a></li>
+					<li><a href="http://www.crta.org.cn/" target="_blank">中国道路运输协会</a></li>
+				</ul>
+				<p>版权所有<br>© copyright 2010-2018. All rights reserved. 粤ICP备15023105号</p>
+			</div>
+			<div class="erweima">
+				<img src="StaticResource/Theme2/Img/erweima.png" width="100" height="102" alt="">
+				<p>扫一扫<br>关注微信公众号</p>
+			</div>
+		</div>
+	</div>
+</footer>
+<!--底部-->
+<script type="text/javascript" src="StaticResource/Theme2/Js/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="StaticResource/Theme2/Js/jquery.cokie.min.js"></script>
+<script type="text/javascript" src="StaticResource/Theme2/Js/layer/layer.js"></script>
+<script type="text/javascript" src="StaticResource/Theme2/Js/conwin.helper.js"></script>
+<script type="text/javascript" src="Modules/JPJSGZFW/Info/Js/Index.js"></script>
+
+</script>
+</body>
+</html>

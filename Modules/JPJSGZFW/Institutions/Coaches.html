@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>教练员查询</title>
+
+    <link href="../../../StaticResource/Theme2/Css/style.css" rel="stylesheet" />
+    <link href="css/coachStyle.css" rel="stylesheet" />
+    <script src="../../../StaticResource/Theme2/Js/jquery-1.10.2.min.js"></script>
+    <script src="js/cunion.js"></script>
+    <script src="js/coaches.js"></script>
+    <script src="../../../StaticResource/Theme2/Js/conwin.helper.js"></script>
+    <script src="../../../StaticResource/Theme2/Js/jquery.cokie.min.js"></script>
+    <script src="../../../StaticResource/Theme2/Js/layer/layer.js"></script>
+</head>
+
+<body>
+    <!-- 顶部 -->
+    <header>
+        <script>
+            var ctx = '';
+            $(function () {
+                var currentNode = 3;
+                $("#nav_content>li").each(function (index) {
+                    if ((index + 1) == currentNode) {
+                        $(this).addClass("current");
+                    } else {
+                        $(this).removeClass("current");
+                    }
+                });
+            });
+            $(function () {
+                $('#nav_content>li').hover(function (e) {
+                    $(this).children('ul').stop().slideToggle();
+                });
+            });
+            //页面加载完毕执行的JS
+            //根据cookie判断用户是否已经登录
+            $(function () {
+                if (!$.trim($.cookie('name')) && !$.trim($.cookie('token'))) {// 
+                    $('.login_in').css("display", "block");
+                    $('.login_already').css("display", "none");
+                } else {
+                    $('.login_in').css("display", "none");
+                    $('.login_already').css("display", "block");
+                }
+            });
+
+        </script>
+        <div class="nav">
+            <div class="nav_in">
+                <h1><img src="../../../StaticResource/Theme2/Img/bg.png" alt=""></h1>
+                <div class="mz">
+                    <p>广东省驾驶培训公众服务网</p>
+                    <p>Guangdong driving and training public service network</p>
+                </div>
+                <div class="login_in" style="overflow: hidden;display:block ;">
+                    <div class="The-login"><a href="Modules/JPJSGZFW/Student/StudentLogin.html">学员服务</a></div>
+                    <div class="The-login"><a href="#">驾校服务</a></div>
+                    <div class="The-login"><a href="#">管理部门登录</a></div>
+                </div>
+
+                <div class="login_already" style="display: none;width: 300px; height: 53px; float:right; ">
+                    <div style="display: inline-block; margin-top: 25px;font-size: 15px;">
+                        欢迎您：
+                        <a href="#"><span style="font-weight: bold; color:#000000;" id='user_name'>李世民</span></a>
+                    </div>
+                    <div class="The-login"><a href="#">退出登录</a></div>
+                </div>
+            </div>
+            <div class="nav_b">
+                <ul id="nav_content">
+                    <li class="current"><a href="../../../Index.html">首页</a></li>
+                    <li><a href="../Info/Statute.html">政策法规</a></li>
+                    <li><a href="">驾校信息公开</a>
+                        <ul class="lst">
+                            <li><a href="ServiceNavigation.html">服务导航</a></li>
+                            <li><a href="Institutions.html">驾校查询</a></li>
+                            <li><a href="Coaches.html">教练员查询</a></li>
+                            <li><a href="CoachCar.html">教练车查询</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../Info/News.html">通知公告</a></li>
+                    <li><a href="../Info/BusinessGuide.html">业务指南</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+
+    <!--内容-->
+    <div class="driver coaches">
+        <div class="driver_in">
+            <div class="driver_t">
+                <p>
+                    <a href="../../../Index.html">首页</a>><a href="#">教练员查询</a>
+                </p>
+            </div>
+            <div class="wrap">
+                <ul>
+                    <li>
+                        <p>选择市级</p>
+                        <select id="city">
+                            <option value="">请选择市级</option>
+                        </select>
+                    </li>
+                    <li>
+                        <p>选择县区</p>
+                        <select id="county">
+                            <option value="">请选择县区</option>
+                        </select>
+                    </li>
+                    <li>
+                        <p>选择驾培机构</p>
+                        <select id="driving_school">
+                            <option value="">请选择驾培机构</option>
+                        </select>
+                    </li>
+                    <li>
+                        <p>教练名称</p>
+                        <input type="text" id="coach_name" placeholder="请输入教练名称">
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" onclick="resetBtn();" style="display:inline;">重置</a>
+                        <a href="javascript:void(0)" onclick="queryBtn();" style="display:inline;">查询</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="list" style="height: 530px;">
+            <ul id="coach_list">
+                <li>
+                    <a href="CoachDetail.html?id=">
+                        <div class="tp">
+                            <img id="photofile" style="height: 140px;width: 130px;" src="../../../StaticResource/Theme2/Img/noimage.jpg">
+                        </div>
+                        <div class="ziliao">
+                            <p>名字</p>
+                            <p>驾校：</p>
+                            <p>&nbsp;</p>
+                            <p>准教车型： &nbsp;&nbsp;&nbsp;&nbsp; 性别：</p>
+                            <p>教龄： &nbsp;&nbsp;&nbsp;&nbsp; 供职状态：</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="cflip">
+            <label id="pageLabel">当前：第1页，共1页</label>
+            <a href="javascript:void(0);"><span id="page_first">首页</span></a>
+            <a href="javascript:void(0);"><span id="backforward">上一页</span></a>
+            <label id="page_index">1</label>
+            <a href="javascript:void(0);"><span id="forward">下一页</span></a>
+            <a href="javascript:void(0);"><span id="page_last">尾页</span></a>
+            <span><input id="page_num" type="text" style="width:20px;"></span>页
+            <a href="javascript:void(0);"><span id="go_page">跳转</span></a>
+        </div>
+        <input type="hidden" id="pageCount" value="1000">
+    </div>
+
+    <!--底部-->
+    <footer>
+        <div class="footer">
+            <div class="footer_in">
+                <div class="lianjie">
+                    <h2>友情链接</h2>
+                    <ul>
+                        <li><a href="http://www.mot.gov.cn/" target="_blank">中华人民共和国交通运输部</a></li>
+                        <li><a href="http://www.mps.gov.cn/" target="_blank">中华人民共和国公安部</a></li>
+                        <li><a href="http://gd.122.gov.cn/" target="_blank">交通安全综合服务管理平台</a></li>
+                        <li><a href="https://www.cttic.cn/" target="_blank">中国交通通信信息中心</a></li>
+                        <li><a href="http://www.crta.org.cn/" target="_blank">中国道路运输协会</a></li>
+                    </ul>
+                    <p>版权所有<br>© copyright 2010-2018. All rights reserved. <a href="http://www.miitbeian.gov.cn" target="_blank">粤ICP备09171042号-4</a></p>
+                </div>
+                <div class="erweima">
+                    <img src="../../../StaticResource/Theme2/Img/erweima.png" width="100" height="102" alt="">
+                    <p>扫一扫<br>关注微信公众号</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

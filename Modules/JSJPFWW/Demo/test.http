@@ -1,0 +1,23 @@
+
+###
+
+POST http://10.0.64.249:7007/api/ServiceGateway/DataService HTTP/1.1
+content-type: application/json
+
+{ 
+    "publicresponse": {
+        "sysid": "D8B243FF-8194-4C45-8653-8777596231B0",
+        "reqid": "AB539BF5-ABF0-41CF-A637-31FD679B3D5E",
+        "protover": "1.0",
+        "servicecode": "004300100039",
+        "servicever": "1.0",
+        "responsetime": "20181030161458442",
+        "signdata": "",
+        "statuscode": 0,
+        "message": "",
+        "reserve": ""
+    },
+    "body": {
+         "coach_num" : "140360"
+    }
+}
