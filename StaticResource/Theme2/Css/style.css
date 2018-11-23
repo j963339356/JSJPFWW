@@ -162,7 +162,7 @@ body>div>p{
 	width:346px;
 	height:300px;
 	float:left;
-	background:url(../Img/s2.jpg) no-repeat;
+	background:url(../images/s2.jpg) no-repeat;
 	position:relative;
 }
 
@@ -220,7 +220,7 @@ body>div>p{
 }
 
 .header_cb ul li{	
-	background:url(../img/dian.png) no-repeat left center;
+	background:url(../images/dian.png) no-repeat left center;
 	padding-left: 13px;
 }
 
@@ -250,7 +250,7 @@ body>div>p{
 .chaxun{
 	width: 100%;
 	height: 30px;
-	background:#008fd7 url(../img/xxcx.png) no-repeat 5px center;
+	background:#008fd7 url(../images/xxcx.png) no-repeat 5px center;
 	line-height: 30px;
 	font-size: 16px;
 	padding-left: 38px;
@@ -354,7 +354,7 @@ body>div>p{
 .zhengfa h2{	
 	font-size: 24px;
 	font-weight: normal;
-	background:url(../img/ywzn.png) no-repeat left center;
+	background:url(../images/ywzn.png) no-repeat left center;
 	padding-left: 35px;
 }
 
@@ -363,17 +363,17 @@ body>div>p{
 }
 
 .fagui h2{	
-	background:url(../img/zcfg.png) no-repeat left center;
+	background:url(../images/zcfg.png) no-repeat left center;
 }
 
 
 
 .jingyan h2{	
-	background:url(../img/jpjy.png) no-repeat left center;
+	background:url(../images/jpjy.png) no-repeat left center;
 }
 
 .gonggao h2{	
-	background:url(../img/tzgg.png) no-repeat left center;
+	background:url(../images/tzgg.png) no-repeat left center;
 	padding-left:35px;
 }
 
@@ -1305,7 +1305,7 @@ body>div>p{
 
 #star ul{margin:0 10px;}
 
-#star li{float:left;width:24px;cursor:pointer;text-indent:-9999px;background:url(../Img/star.png) no-repeat;}
+#star li{float:left;width:24px;cursor:pointer;text-indent:-9999px;background:url(../images/star.png) no-repeat;}
 
 #star strong{color:#f60;padding-left:10px;}
 

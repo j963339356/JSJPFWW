@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>广东省驾驶培训公众服务网</title>
+    <link rel="stylesheet" href="./Css/registered-style.css" type="text/css"> 
+    <link rel="stylesheet" href="../../../StaticResource/Theme2/Css/style.css" type="text/css">  
+    <script src="../../../StaticResource/Theme2/Js/jquery-1.10.2.min.js"></script>
+    <script src="../../../StaticResource/Theme2/Js/layer/layer.js"></script>
+    <script src="./Js/jquery.cokie.min.js"></script>
+    <script src="./Js/conwin.helper.js"></script>
+    <script src="./Js/headers.js"></script>
+    <script src="./Js/logincookies.js"></script>
+    <script src="./Js/exit.js"></script>
+    
+    <script>
+       var name = $.cookie('name');
+       var token = $.cookie('token');
+     
+       if(token==""){
+        alert("您未登录，无法浏览人个信息，点击确定，系统为您转跳登录页面")
+        window.location.href = './StudentLogin.html';
+       }
+      
+    </script>
+
+    <script>
+    // 导航栏下拉列表
+var ctx = '';
+$(function(){
+	var currentNode=1;
+	$("#nav_content>li").each(function(index){
+		if((index+1)==currentNode){
+			$(this).addClass("current");
+		}else{
+			$(this).removeClass("current");
+		}
+	});
+});
+$(function(){	
+	$('#nav_content>li').hover(function(e) {
+        $(this).children('ul').stop().slideToggle();
+    });
+});
+    
+    </script>
+
+</head>
+
+  <body>
+  
+
+<!--头部-->
+<!--中间内容-->
+     
+
+<div class="grzl">
+    <div class="grzl_l">
+    <div class="grzl_t">
+            <span>基本信息管理</span>
+            <div class="grjb" id="basic">个人基本信息</div>
+        </div>
+    <div class="grzl_b">
+            <span>业务办理</span>
+            <div class="wypx" id="train">我的培训</div>
+            <div class="wypj" id="complain">我要投诉</div>
+            <div class="wyts" id="appraise">我要评价</div>
+        </div>
+
+    
+    </div>
+    <div class="grzl_r">
+        <div class="my-basic">
+        	<div class="content">
+                <!-- 基础信息 -->
+                <div class="box" id="myTab2_Content0">
+                    <div class="margtop title1">
+                        <div>基础信息</div>
+                    </div>
+                    <table class="table">
+                        <tbody>
+                            <tr >
+                                <td>姓名</td>
+                                <td width="25%"><span id="user_name1"  style="color:#000000;"></span></td>
+                                <td width="15%">性别</td>
+                                <td width="25%"><span id="user_sex"  style="color:#000000;"></td>
+                                <td width="20%" rowspan="5">
+                                    <img style="height: 200px;width: 100%;" src="../../../StaticResource/Theme2/Img/p1.jpg">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>证件类型</td>
+                                <td><span  style="color:#000000;">身份证</span></td>
+                                <td>证件号</td>
+                                <td><span id="id_card"  style="color:#000000;"></span></td>
+                            </tr>
+                            <tr>
+                                <td>国籍</td>
+                                <td><span style="color:#000000;" >中国</span></td>
+                                <td>手机号码</td>
+                                <td><span id="phone"  style="color:#000000;"></span></td>
+                            </tr>
+                            <tr>
+                                <td>学员编号</td>
+                                <td><span id="id"  style="color:#000000;"></span></td>
+                                <td>结业状态</td>
+                                <td><span id="user_status"  style="color:#000000;"></span></td>
+                            </tr>
+                            <tr>
+                                <td>家庭地址</td>
+                                <td colspan="3" ><span id="user_city"  style="color:#000000;"></span></td>
+                                       
+                            </tr>
+                        </tbody>
+                    </table>
+                                <!-- 第二部分开始 -->
+                    <div class="margtop title1">
+                        <div>报名信息</div>
+                    </div>
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <td>业务类型</td>
+                                <td colspan="3"><span style="color:#000000;" >初领</span></td>
+                            </tr>
+                            <tr>
+                                <td style="width:15%">所属区域</td>
+                                <td style="width:15%"><span  style="color:#000000;">罗定市</span></td>
+                                <td style="width:15%">培训车型</td>
+                                <td style="width:15%"><span id="train_type"  style="color:#000000;"></td>
+                            </tr>
+                            <tr>
+                                <td>报名时间</td>
+                                <td><span id="apply_date"  style="color:#000000;"></span></td>
+                                <td>报名驾培机构</td>
+                                <td><span  style="color:#000000;">罗定市顺安机动车驾驶技术培训有限公司</span></td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                    <!-- 第三部分开始 -->
+                    <div class="margtop title1">
+                        <div>培训进度</div>
+                    </div>
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <td style="width:15%">培训部分</td>
+                                <td style="width:15%">大纲学时</td>
+                                <td style="width:15%">完成学时</td>
+                                <td style="width:15%">完成进度</td>
+                            </tr>
+                            <tr>
+                                <td>第一部分</td>
+                                <td><span  style="color:#000000;">12</span></td>
+                                <td><span  style="color:#000000;">6</span></td>
+                                <td><span  style="color:#000000;">50%</span></td>
+                            </tr>
+                            <tr>
+                                <td>第二部分</td>
+                                <td><span  style="color:#000000;">18</span></td>
+                                <td><span  style="color:#000000;">6</span></td>
+                                <td><span  style="color:#000000;">67%</span></td>
+                            </tr>
+                            <tr>
+                                <td>第三部分</td>
+                                <td><span  style="color:#000000;">26</span></td>
+                                <td><span  style="color:#000000;">13</span></td>
+                                <td><span  style="color:#000000;">50%</span></td>
+                            </tr>
+                            <tr>
+                                <td>第四部分</td>
+                                <td><span  style="color:#000000;">10</span></td>
+                                <td><span  style="color:#000000;">2</span></td>
+                                <td><span  style="color:#000000;">20%</span></td>
+                            </tr>                            
+                        </tbody>
+                    </table>
+
+           
+                </div>
+            </div>
+        </div>
+               
+       
+</div>
+</div>
+<!--中间内容-->
+<!--尾部-->
+    <div class="footer">
+	<div class="footer_in">
+        <div class="lianjie">
+            <h2>友情链接</h2>
+            <ul>
+            	<li><a href="http://www.mot.gov.cn/" target="_blank">中华人民共和国交通运输部</a></li>
+            	<li><a href="http://www.mps.gov.cn/" target="_blank">中华人民共和国公安部</a></li>
+            	<li><a href="http://gd.122.gov.cn/" target="_blank">交通安全综合服务管理平台</a></li>
+            	<li><a href="https://www.cttic.cn/" target="_blank">中国交通通信信息中心</a></li>
+            	<li><a href="http://www.crta.org.cn/" target="_blank">中国道路运输协会</a></li>
+            </ul>
+            <p>版权所有<br>© copyright 2010-2018. All rights reserved. <a href="http://www.miitbeian.gov.cn" target="_blank">粤ICP备09171042号-4</a></p>
+        </div>
+        <div class="erweima">
+        	<img src="../../../StaticResource/Theme2/Img/erweima.png" width="100" height="102" alt="">
+            <p>扫一扫<br>关注微信公众号</p>
+        </div>
+    </div>
+</div>
+<!--尾部-->
+
+<script src="./Js/studentInfoData.js"></script>
+
+</body>
+</html>

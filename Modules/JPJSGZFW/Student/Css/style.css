@@ -1,0 +1,23 @@
+@charset "utf-8";
+
+/***************注册登录********************/
+
+.huangyin-zc{
+	width: 100%;
+	height: 600px;
+	background:url(../../../../StaticResource/Theme2/Img/welcom.jpg) no-repeat center center;
+	
+}
+
+.dianlu>div span{
+	height: 38px;
+	width: 40px;
+	background:#F3F3F3 url(../../../../StaticResource/Theme2/Img/zh.png) no-repeat center center;
+	display: block;
+	float: left;
+}
+
+.dianlu .mm span{
+	background:#F3F3F3 url(../../../../StaticResource/Theme2/Img/mm.png) no-repeat center center;
+}
+
