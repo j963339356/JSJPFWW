@@ -1,0 +1,342 @@
+<!DOCTYPE HTML>
+        <html>
+        <head>
+            <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+            <meta charset="utf-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <title>编辑人员</title>
+            <link href="/Modules/Component/site.css" rel="stylesheet" />
+        </head>
+        <body>
+            <div class="portlet cus-portlet">
+                <div class="portlet-title">
+                    <div class="caption">
+                        <span>
+                            <i class="iconfont icon-bianjibiaodantaitou"></i>
+                            <span id="op">编辑人员</span>
+                        </span>
+                    </div>
+                    <div class="btnclose">
+                        <a id="btnclose" href="javascript:;">
+                            <i class="glyphicon glyphicon-remove-circle"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="row" style="clear: both;">
+                    <div class="col-sm-12" style="text-align: right; padding-right: 22px; padding-bottom: 5px; ">
+                        <button id="saveBtn" type="submit" class="btn c-green"><i class="fa fa-save"></i> 保存</button>
+                    </div>
+                </div>
+                <div class="portlet-body form">
+                    <ul class="nav nav-tabs">
+                        <li class="active">
+                            <span class="separate-line left"></span>
+                            <a href="#JiChuXinXi" id="tab1" data-toggle="tab">基础信息</a>
+                        </li>
+                        <!--<li>
+                            <span class="separate-line left"></span>
+                            <a href="#ZiBiaoXinXi" id="tab2" data-toggle="tab">子表信息</a>
+                        </li>-->
+                        <li>
+                            <span class="separate-line left"></span>
+                            <a href="#FuJian" id="tab3" data-toggle="tab">补充材料</a>
+                            <span class="separate-line right"></span>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane fade active in" id="JiChuXinXi">
+                            <form action="#" id="Form1" class="form-horizontal form-horizontal form-bordered form-row-stripped form-block">
+                                <input type="hidden" id="Id" name="Id" />
+                                <div class="">
+                                    <div class="row">
+                                        <div class="col-xs-12" style="margin-top: 10px; margin-bottom: 10px;">
+                                            <div class="form-body scroller form-box">
+                                                
+                                                <h4 class="form-section cus-form-section">
+                                                    <span>基本信息</span>
+                                                </h4>
+                                                <div class="form-group-group">
+                                                    
+                                                    <div class="form-group">
+                                                        
+                                                        <label class="control-label col-xs-1" for="XingMing">
+                                                            姓名<span class="required">*</span>
+                                                        </label>
+                                                         <div class="col-xs-3">
+                                                            <div class="input-icon right">
+                                                                <i class="fa"></i>
+                                                                <input type="text"  name="XingMing" id="XingMing" class="form-control required" data-cwvalid='{"blur":true,"required":true}' />
+                                                            </div>
+                                                        </div>
+                                                        
+                                                        <label class="control-label col-xs-1" for="XingBie">
+                                                            性别<span class="required">*</span>
+                                                        </label>
+                                                         <div class="col-xs-3">
+                                                            <div class="input-icon right">
+                                                                <i class="fa"></i>
+                                                                <select name="XingBie" id="XingBie" class="form-control required"><option value="">请选择</option><option value="1">男</option><option value="2">女</option></select>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                        <label class="control-label col-xs-1" for="NianLing">
+                                                            年龄<span class="required">*</span>
+                                                        </label>
+                                                        <div class="col-xs-3" style="height:48px">
+                                                            <div class="input-icon right">
+                                                                <i class="fa"></i>
+                                                                <input type="text"  name="NianLing" id="NianLing" class="form-control required" data-cwvalid='{"blur":true,"required":true,"regx":"^[0-9]*$","tip":"请输入数字"}' />
+                                                            </div>
+                                                        </div>
+                                                        
+                                                    </div>
+                                                    
+                                                    <div class="form-group">
+                                                        
+                                                        <label class="control-label col-xs-1" for="XiaQuSheng">
+                                                            辖区省<span class="required">*</span>
+                                                        </label>
+                                                         <div class="col-xs-3">
+                                                            <div class="input-icon right">
+                                                                <i class="fa"></i>
+                                                                <input type="text" readonly name="XiaQuSheng" id="XiaQuSheng" class="form-control required" data-cwvalid='{"blur":true,"required":true}' value="广东" />
+                                                            </div>
+                                                        </div>
+                                                        
+                                                        <label class="control-label col-xs-1" for="XiaQuShi">
+                                                            辖区市<span class="required">*</span>
+                                                        </label>
+                                                         <div class="col-xs-3">
+                                                            <div class="input-icon right">
+                                                                <i class="fa"></i>
+                                                                <select name="XiaQuShi" id="XiaQuShi" class="form-control required"><option value="">请选择</option></select>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                        <label class="control-label col-xs-1" for="XiaQuXian">
+                                                            辖区县
+                                                        </label>
+                                                         <div class="col-xs-3">
+                                                            <div class="input-icon right">
+                                                                <i class="fa"></i>
+                                                                <select name="XiaQuXian" id="XiaQuXian" class="form-control "><option value="">请选择</option></select>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                    </div>
+                                                    
+                                                    <div class="form-group">
+                                                        
+                                                        <label class="control-label col-xs-1" for="ZhiYe">
+                                                            职业
+                                                        </label>
+                                                         <div class="col-xs-3">
+                                                            <div class="input-icon right">
+                                                                <i class="fa"></i>
+                                                                <input type="text"  name="ZhiYe" id="ZhiYe" class="form-control " data-cwvalid='' />
+                                                            </div>
+                                                        </div>
+                                                        
+                                                        <label class="control-label col-xs-1" for="BeiZhu">
+                                                            备注
+                                                        </label>
+                                                         <div class="col-xs-3">
+                                                            <div class="input-icon right">
+                                                                <i class="fa"></i>
+                                                                <input type="text"  name="BeiZhu" id="BeiZhu" class="form-control " data-cwvalid='' />
+                                                            </div>
+                                                        </div>
+                                                        
+                                                    </div>
+                                                    
+                                                </div>
+                                                
+                                                <h4 class="form-section cus-form-section">
+                                                    <span></span>
+                                                </h4>
+                                                <div class="form-group-group">
+                                                    
+                                                    <div class="form-group">
+                                                        
+                                                        <label class="control-label col-xs-1" for="SYS_ShuJuLaiYuan">
+                                                            数据来源
+                                                        </label>
+                                                         <div class="col-xs-3">
+                                                            <div class="input-icon right">
+                                                                <i class="fa"></i>
+                                                                <input type="hidden" id="SYS_ShuJuLaiYuan" name="SYS_ShuJuLaiYuan" />
+                                                            </div>
+                                                        </div>
+                                                        
+                                                        <label class="control-label col-xs-1" for="SYS_ChuangJianRenID">
+                                                            创建人ID
+                                                        </label>
+                                                         <div class="col-xs-3">
+                                                            <div class="input-icon right">
+                                                                <i class="fa"></i>
+                                                                <input type="hidden" id="SYS_ChuangJianRenID" name="SYS_ChuangJianRenID" />
+                                                            </div>
+                                                        </div>
+                                                        
+                                                        <label class="control-label col-xs-1" for="SYS_ChuangJianRen">
+                                                            创建人
+                                                        </label>
+                                                         <div class="col-xs-3">
+                                                            <div class="input-icon right">
+                                                                <i class="fa"></i>
+                                                                <input type="hidden" id="SYS_ChuangJianRen" name="SYS_ChuangJianRen" />
+                                                            </div>
+                                                        </div>
+                                                        
+                                                    </div>
+                                                    
+                                                    <div class="form-group">
+                                                        
+                                                        <label class="control-label col-xs-1" for="SYS_ChuangJianShiJian">
+                                                            创建时间
+                                                        </label>
+                                                         <div class="col-xs-3">
+                                                            <div class="input-icon right">
+                                                                <i class="fa"></i>
+                                                                <input type="hidden" id="SYS_ChuangJianShiJian" name="SYS_ChuangJianShiJian" />
+                                                            </div>
+                                                        </div>
+                                                        
+                                                        <label class="control-label col-xs-1" for="SYS_ZuiJinXiuGaiRenID">
+                                                            最近修改人ID
+                                                        </label>
+                                                         <div class="col-xs-3">
+                                                            <div class="input-icon right">
+                                                                <i class="fa"></i>
+                                                                <input type="hidden" id="SYS_ZuiJinXiuGaiRenID" name="SYS_ZuiJinXiuGaiRenID" />
+                                                            </div>
+                                                        </div>
+                                                        
+                                                        <label class="control-label col-xs-1" for="SYS_ZuiJinXiuGaiRen">
+                                                            最近修改人
+                                                        </label>
+                                                         <div class="col-xs-3">
+                                                            <div class="input-icon right">
+                                                                <i class="fa"></i>
+                                                                <input type="hidden" id="SYS_ZuiJinXiuGaiRen" name="SYS_ZuiJinXiuGaiRen" />
+                                                            </div>
+                                                        </div>
+                                                        
+                                                    </div>
+                                                    
+                                                    <div class="form-group">
+                                                        
+                                                        <label class="control-label col-xs-1" for="SYS_ZuiJinXiuGaiShiJian">
+                                                            最近修改时间
+                                                        </label>
+                                                         <div class="col-xs-3">
+                                                            <div class="input-icon right">
+                                                                <i class="fa"></i>
+                                                                <input type="hidden" id="SYS_ZuiJinXiuGaiShiJian" name="SYS_ZuiJinXiuGaiShiJian" />
+                                                            </div>
+                                                        </div>
+                                                        
+                                                        <label class="control-label col-xs-1" for="SYS_XiTongZhuangTai">
+                                                            系统状态
+                                                        </label>
+                                                         <div class="col-xs-3">
+                                                            <div class="input-icon right">
+                                                                <i class="fa"></i>
+                                                                <input type="hidden" id="SYS_XiTongZhuangTai" name="SYS_XiTongZhuangTai" />
+                                                            </div>
+                                                        </div>
+                                                        
+                                                        <label class="control-label col-xs-1" for="SYS_XiTongBeiZhu">
+                                                            系统备注
+                                                        </label>
+                                                         <div class="col-xs-3">
+                                                            <div class="input-icon right">
+                                                                <i class="fa"></i>
+                                                                <input type="hidden" id="SYS_XiTongBeiZhu" name="SYS_XiTongBeiZhu" />
+                                                            </div>
+                                                        </div>
+                                                        
+                                                    </div>
+                                                    
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="tab-pane fade" id="ZiBiaoXinXi">
+                            <form action="#" id="Form2" class="form-horizontal form-horizontal form-bordered form-row-stripped form-block">
+                                <div class="">
+                                    <div class="row">
+                                        <div class="col-xs-12" style="margin-top: 10px; margin-bottom: 10px;">
+                                            <div class="form-body scroller form-box" style="height:500px;overflow:hidden;">
+                                                <div class="form-group-group" style="border:none">
+                                                    <div class="form-group">
+                                                        <div class="row" style="border:none">
+                                                            <div class="col-xs-12">
+                                                                <a id="btnAddZiBiao" class="btn c-cyan" href="javascript:;">
+                                                                    <i class="fa fa-plus"></i>
+                                                                    新增
+                                                                </a>
+                                                                <a id="btnEditZiBiao" class="btn c-green" href="javascript:;">
+                                                                    <i class="fa fa-edit"></i>
+                                                                    编辑
+                                                                </a>
+                                                                <a id="btnDelZiBiao" class="btn c-yellow" href="javascript:;">
+                                                                    <i class="fa fa-remove"></i>
+                                                                    删除
+                                                                </a>
+                                                                <a id="btnViewZiBiao" class="btn c-blue" href="javascript:;">
+                                                                    <i class="fa fa-search"></i>
+                                                                    查看
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xs-12" style="border:none">
+                                                            <table id="tb_ZiBiaoXinXi" class="table table-striped table-bordered table-hover">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th class="table-checkbox">
+                                                                            <input type="checkbox" class="group-checkable" title="全选/反选" />
+                                                                        </th>
+                                                                        <th data-name="">
+                                                                            列1
+                                                                        </th>
+                                                                        <th data-name="">
+                                                                            列2
+                                                                        </th>
+                                                                        <th data-name="">
+                                                                            列3
+                                                                        </th>
+                                                                        <th data-name="">
+                                                                            列4
+                                                                        </th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr class="odd gradeX">
+                                                                        <td valign="top" colspan="11" class="dataTables_empty">请先进行查询</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="tab-pane fade" id="FuJian">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script data-main="js/Edit.js" src="/Modules/Component/require.js"></script>
+        </body>
+        </html>

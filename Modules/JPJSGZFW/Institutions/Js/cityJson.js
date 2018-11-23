@@ -1,0 +1,106 @@
+var city = [{
+	"ID": 10,
+	"NAME": "广州市",
+	"PARENT_ID": 1,
+	"DEEP": 1
+}, {
+	"ID": 11,
+	"NAME": "韶关市",
+	"PARENT_ID": 1,
+	"DEEP": 1
+}, {
+	"ID": 12,
+	"NAME": "深圳市",
+	"PARENT_ID": 1,
+	"DEEP": 1
+}, {
+	"ID": 13,
+	"NAME": "珠海市",
+	"PARENT_ID": 1,
+	"DEEP": 1
+}, {
+	"ID": 14,
+	"NAME": "汕头市",
+	"PARENT_ID": 1,
+	"DEEP": 1
+}, {
+	"ID": 15,
+	"NAME": "佛山市",
+	"PARENT_ID": 1,
+	"DEEP": 1
+}, {
+	"ID": 16,
+	"NAME": "江门市",
+	"PARENT_ID": 1,
+	"DEEP": 1
+}, {
+	"ID": 17,
+	"NAME": "湛江市",
+	"PARENT_ID": 1,
+	"DEEP": 1
+}, {
+	"ID": 18,
+	"NAME": "茂名市",
+	"PARENT_ID": 1,
+	"DEEP": 1
+}, {
+	"ID": 19,
+	"NAME": "肇庆市",
+	"PARENT_ID": 1,
+	"DEEP": 1
+}, {
+	"ID": 20,
+	"NAME": "惠州市",
+	"PARENT_ID": 1,
+	"DEEP": 1
+}, {
+	"ID": 21,
+	"NAME": "梅州市",
+	"PARENT_ID": 1,
+	"DEEP": 1
+}, {
+	"ID": 22,
+	"NAME": "汕尾市",
+	"PARENT_ID": 1,
+	"DEEP": 1
+}, {
+	"ID": 23,
+	"NAME": "河源市",
+	"PARENT_ID": 1,
+	"DEEP": 1
+}, {
+	"ID": 24,
+	"NAME": "阳江市",
+	"PARENT_ID": 1,
+	"DEEP": 1
+}, {
+	"ID": 25,
+	"NAME": "清远市",
+	"PARENT_ID": 1,
+	"DEEP": 1
+}, {
+	"ID": 26,
+	"NAME": "东莞市",
+	"PARENT_ID": 1,
+	"DEEP": 1
+}, {
+	"ID": 27,
+	"NAME": "中山市",
+	"PARENT_ID": 1,
+	"DEEP": 1
+}, {
+	"ID": 28,
+	"NAME": "潮州市",
+	"PARENT_ID": 1,
+	"DEEP": 1
+}, {
+	"ID": 29,
+	"NAME": "揭阳市",
+	"PARENT_ID": 1,
+	"DEEP": 1
+}, {
+	"ID": 30,
+	"NAME": "云浮市",
+	"PARENT_ID": 1,
+	"DEEP": 1
+}];

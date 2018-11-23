@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>教练员评价</title>
+		<link rel="stylesheet" href="../../../StaticResource/Theme2/Css/style.css" type="text/css">
+		<link rel="stylesheet" href="../../../StaticResource/Theme2/Css/registered-style.css" type="text/css">
+		<link rel="stylesheet" href="../../../StaticResource/Theme2/Js/layui/css/layui.css" type="text/css">
+		<style type="text/css">
+			.xingxing li {
+				float: left;
+				background: url(../../../StaticResource/Theme2/Img/star.png) no-repeat;
+				width: 24px;
+				height: 24px;
+				margin-top: 2px;
+			}
+
+			.jianjie_b .xingxing li {
+				background: url(../../../StaticResource/Theme2/Img/star.png) no-repeat;
+				background-position: 0 -28px;
+			}
+
+			#star li.on {
+				background-position: 0 -28px!important;;
+			}
+
+			#star li {
+				float: left!important;;
+				width: 24px!important;;
+				cursor: pointer!important;;
+				text-indent: -9999px!important;;
+				background: url(../../../StaticResource/Theme2/Img/star.png) no-repeat!important;;
+			}
+		</style>
+		<style>
+			.layui-layer-title {
+				background-color: #2196F3 !important;
+				color: white !important;
+				font-size: 15px !important;
+				font-weight: bold !important;
+				height: 30px !important;
+				line-height: 30px !important;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- begin of header -->
+		<header>
+			<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+			<html>
+				<head>
+					<meta charset="utf-8">
+					<title>广东省驾驶培训公众服务网</title>
+				</head>
+				<body>
+					<div class="nav">
+						<div class="nav_in">
+							<h1><img src="../../../StaticResource/Theme2/Img/bg.png" alt=""></h1>
+							<div class="mz">
+								<p>广东省驾驶培训公众服务网</p>
+								<p>Guangdong driving and training public service network</p>
+							</div>
+							<div class="nhhy">
+								欢迎您：<span style="color:#F00">test</span>
+								<button id="exitBtn">退出登录</button>
+							</div>
+						</div>
+						<div class="nav_b">
+							<ul id="nav_content">
+								<li class="current"><a href="../../../Index.html">首页</a></li>
+								<li><a href="../Info/Statute.html">政策法规</a></li>
+								<li><a href="">驾校信息公开</a>
+									<ul class="lst">
+										<li><a href="ServiceNavigation.html">服务导航</a></li>
+										<li><a href="Institutions.html">驾校查询</a></li>
+										<li><a href="Coaches.html">教练员查询</a></li>
+										<li><a href="CoachCar.html">教练车查询</a></li>
+									</ul>
+								</li>
+								<li><a href="../Info/News.html">通知公告</a></li>
+								<li><a href="../Info/BusinessGuide.html">业务指南</a></li>
+							</ul>
+						</div>
+					</div>
+				</body>
+				<script src="../../../StaticResource/Theme2/Js/jquery-1.10.2.min.js"></script>
+				<script src="../../../StaticResource/Theme2/Js/layer/layer.js"></script>
+				<script>
+					var ctx = '';
+					$(function(){
+						var currentNode=-1;
+						$("#nav_content>li").each(function(index){
+							if((index+1)==currentNode){
+								$(this).addClass("current");
+							}else{
+								$(this).removeClass("current");
+							}
+						});
+					});
+					$(function(){	
+						$('#nav_content>li').hover(function(e) {
+							$(this).children('ul').stop().slideToggle();
+						});
+					});
+				</script>
+			</html>
+		</header>
+		<!-- end of header -->
+		<input type="hidden" id="objectnum" value="8010520415867213">
+		<input type="hidden" id="stunum" value="0913483106459292">
+		<input type="hidden" id="trainPhase" value="2">
+		<input type="hidden" id="trainTeachId" value="3199489">
+		<div class="grzl">
+			<div class="grzl_l">
+				<div class="grzl_t"> <span>基本信息管理</span>
+					<div class="grjb" id="basic">个人基本信息</div>
+				</div>
+				<div class="grzl_b"> <span>业务办理</span>
+					<div class="wypx" id="train">我的培训</div>
+					<div class="wypj" id="complain">我要投诉</div>
+					<div class="wyts" id="appraise">我要评价</div>
+				</div>
+			</div>
+			<div class="grzl_r">
+				<div class="my-training">
+					<div class="my-biaoti" style="background:url(../../../StaticResource/Theme2/Img/wdpx.png) no-repeat left center">教练评价</div>
+					<div class="driver-details jiaolianyuan">
+						<div class="problem_l">
+							<div class="jianjie">
+								<div class="jianjie_b">
+									<div class="img"> <img src="../../../StaticResource/Theme2/Img/zl.jpg" width="180" height="220 " alt=""> </div>
+									<input type="hidden" id="myType" value="myAppraise">
+									<ul>
+										<li><span>姓&nbsp;&nbsp;&nbsp;&nbsp;名：</span>王里</li>
+										<li><span>性&nbsp;&nbsp;&nbsp;&nbsp;别：</span>男</li>
+										<li><span>所属驾校：</span>罗定市顺安机动车驾驶技术培训有限公司</li>
+										<li><span>教&nbsp;&nbsp;&nbsp;&nbsp;龄：</span>1.56</li>
+										<li><span>准教车型：</span>C1</li>
+										<li><span>职业资格证号：</span>510230198208242310</li>
+										<li><span>职业资格等级：</span>一级</li>
+										<li>
+											<input id="overall" value="0" type="hidden">
+											<div class="xingxing"><span>服务评价：</span>
+												<ul>
+													<li></li>
+													<li></li>
+													<li></li>
+													<li></li>
+													<li></li>
+												</ul>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="jianjie">
+								<div class="zixun">
+									<p style="background:url(../../../StaticResource/Theme2/Img/pj.png) no-repeat left center">评价内容</p>
+									<textarea class="zixun_in" id="appraise_content"></textarea>
+									<div id="star"><span>评价星级</span>
+										<ul>
+											<li><a>1</a></li>
+											<li><a>2</a></li>
+											<li><a>3</a></li>
+											<li><a>4</a></li>
+											<li><a>5</a></li>
+										</ul>
+										<span></span>
+										<p></p>
+										<button class="button" id="appraiseBtn">评价</button>
+									</div>
+									<ul id="jiedian">
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- begin od footer -->
+		<footer>
+			<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+			<html>
+				<head>
+					<title>footer</title>
+					<link rel="stylesheet" href="../../../StaticResource/Theme2/Css/style.css" type="text/css">
+				</head>
+				<body>
+					<div class="footer">
+						<div class="footer_in">
+							<div class="lianjie">
+								<h2>友情链接</h2>
+								<ul>
+									<li><a href="http://www.mot.gov.cn/" target="_blank">中华人民共和国交通运输部</a></li>
+									<li><a href="http://www.mps.gov.cn/" target="_blank">中华人民共和国公安部</a></li>
+									<li><a href="http://gd.122.gov.cn/" target="_blank">交通安全综合服务管理平台</a></li>
+									<li><a href="https://www.cttic.cn/" target="_blank">中国交通通信信息中心</a></li>
+									<li><a href="http://www.crta.org.cn/" target="_blank">中国道路运输协会</a></li>
+								</ul>
+								<p>版权所有<br>© copyright 2010-2018. All rights reserved. <a href="http://www.miitbeian.gov.cn" target="_blank">粤ICP备09171042号-4</a></p>
+							</div>
+							<div class="erweima">
+								<img src="../../../StaticResource/Theme2/Img/erweima.png" width="100" height="102" alt="">
+								<p>扫一扫<br>关注微信公众号</p>
+							</div>
+						</div>
+					</div>
+				</body>
+			</html>
+		</footer>
+		<!-- end of footer -->
+		<script src="../../../StaticResource/Theme2/Js/jquery-1.10.2.min.js"></script>
+		<script type="text/javascript" src="../../../StaticResource/Theme2/Js/jquery.cokie.min.js"></script>
+
+		<script src="../../../StaticResource/Theme2/Js/ma.js"></script>
+		<script type="text/javascript" src="../../../StaticResource/Theme2/Js/date/WdatePicker.js"></script>
+		<script src="../../../StaticResource/Theme2/Js/layui/layui.js" charset="utf-8"></script>
+		<script src="../../../StaticResource/Theme2/Js/login/common.js"></script>
+		<script src="Js/coachAppraise.js"></script>
+	</body>
+</html>

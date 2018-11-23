@@ -1,0 +1,1301 @@
+var county = [{
+	"ID": 1001,
+	"NAME": "荔湾区",
+	"PARENT_ID": 10,
+	"DEEP": 2
+}, {
+	"ID": 1002,
+	"NAME": "越秀区",
+	"PARENT_ID": 10,
+	"DEEP": 2
+}, {
+	"ID": 1003,
+	"NAME": "海珠区",
+	"PARENT_ID": 10,
+	"DEEP": 2
+}, {
+	"ID": 1004,
+	"NAME": "天河区",
+	"PARENT_ID": 10,
+	"DEEP": 2
+}, {
+	"ID": 1005,
+	"NAME": "白云区",
+	"PARENT_ID": 10,
+	"DEEP": 2
+}, {
+	"ID": 1006,
+	"NAME": "黄浦区",
+	"PARENT_ID": 10,
+	"DEEP": 2
+}, {
+	"ID": 1007,
+	"NAME": "番禺区",
+	"PARENT_ID": 10,
+	"DEEP": 2
+}, {
+	"ID": 1008,
+	"NAME": "花都区",
+	"PARENT_ID": 10,
+	"DEEP": 2
+}, {
+	"ID": 1009,
+	"NAME": "南沙区",
+	"PARENT_ID": 10,
+	"DEEP": 2
+}, {
+	"ID": 1010,
+	"NAME": "增城区",
+	"PARENT_ID": 10,
+	"DEEP": 2
+}, {
+	"ID": 1011,
+	"NAME": "从化区",
+	"PARENT_ID": 10,
+	"DEEP": 2
+}, {
+	"ID": 1101,
+	"NAME": "市辖区",
+	"PARENT_ID": 11,
+	"DEEP": 2
+}, {
+	"ID": 1102,
+	"NAME": "武江区",
+	"PARENT_ID": 11,
+	"DEEP": 2
+}, {
+	"ID": 1103,
+	"NAME": "浈江区",
+	"PARENT_ID": 11,
+	"DEEP": 2
+}, {
+	"ID": 1104,
+	"NAME": "曲江区",
+	"PARENT_ID": 11,
+	"DEEP": 2
+}, {
+	"ID": 1105,
+	"NAME": "始兴县",
+	"PARENT_ID": 11,
+	"DEEP": 2
+}, {
+	"ID": 1106,
+	"NAME": "仁化县",
+	"PARENT_ID": 11,
+	"DEEP": 2
+}, {
+	"ID": 1107,
+	"NAME": "翁源县",
+	"PARENT_ID": 11,
+	"DEEP": 2
+}, {
+	"ID": 1108,
+	"NAME": "乳源瑶族自治县",
+	"PARENT_ID": 11,
+	"DEEP": 2
+}, {
+	"ID": 1109,
+	"NAME": "新丰县",
+	"PARENT_ID": 11,
+	"DEEP": 2
+}, {
+	"ID": 1110,
+	"NAME": "乐昌市",
+	"PARENT_ID": 11,
+	"DEEP": 2
+}, {
+	"ID": 1111,
+	"NAME": "南雄市",
+	"PARENT_ID": 11,
+	"DEEP": 2
+}, {
+	"ID": 1112,
+	"NAME": "京港澳高速公路",
+	"PARENT_ID": 11,
+	"DEEP": 2
+}, {
+	"ID": 1113,
+	"NAME": "韶赣高速公路",
+	"PARENT_ID": 11,
+	"DEEP": 2
+}, {
+	"ID": 1201,
+	"NAME": "市辖区",
+	"PARENT_ID": 12,
+	"DEEP": 2
+}, {
+	"ID": 1202,
+	"NAME": "罗湖区",
+	"PARENT_ID": 12,
+	"DEEP": 2
+}, {
+	"ID": 1203,
+	"NAME": "福田区",
+	"PARENT_ID": 12,
+	"DEEP": 2
+}, {
+	"ID": 1204,
+	"NAME": "南山区",
+	"PARENT_ID": 12,
+	"DEEP": 2
+}, {
+	"ID": 1205,
+	"NAME": "宝安区",
+	"PARENT_ID": 12,
+	"DEEP": 2
+}, {
+	"ID": 1206,
+	"NAME": "龙岗区",
+	"PARENT_ID": 12,
+	"DEEP": 2
+}, {
+	"ID": 1207,
+	"NAME": "盐田区",
+	"PARENT_ID": 12,
+	"DEEP": 2
+}, {
+	"ID": 1208,
+	"NAME": "口岸大队",
+	"PARENT_ID": 12,
+	"DEEP": 2
+}, {
+	"ID": 1209,
+	"NAME": "高速公路同乐大队",
+	"PARENT_ID": 12,
+	"DEEP": 2
+}, {
+	"ID": 1210,
+	"NAME": "高速公路梅观大队",
+	"PARENT_ID": 12,
+	"DEEP": 2,
+}, {
+	"ID": 1211,
+	"NAME": "高速公路惠盐大队",
+	"PARENT_ID": 12,
+	"DEEP": 2,
+}, {
+	"ID": 1212,
+	"NAME": "蛇口港大队",
+	"PARENT_ID": 12,
+	"DEEP": 2,
+}, {
+	"ID": 1213,
+	"NAME": "机场大队",
+	"PARENT_ID": 12,
+	"DEEP": 2,
+}, {
+	"ID": 1214,
+	"NAME": "光明区",
+	"PARENT_ID": 12,
+	"DEEP": 2,
+}, {
+	"ID": 1215,
+	"NAME": "坪山区",
+	"PARENT_ID": 12,
+	"DEEP": 2
+}, {
+	"ID": 1301,
+	"NAME": "市辖区",
+	"PARENT_ID": 13,
+	"DEEP": 2
+}, {
+	"ID": 1302,
+	"NAME": "香洲区",
+	"PARENT_ID": 13,
+	"DEEP": 2
+}, {
+	"ID": 1303,
+	"NAME": "斗门区",
+	"PARENT_ID": 13,
+	"DEEP": 2
+}, {
+	"ID": 1304,
+	"NAME": "金湾区",
+	"PARENT_ID": 13,
+	"DEEP": 2
+}, {
+	"ID": 1305,
+	"NAME": "珠海高速",
+	"PARENT_ID": 13,
+	"DEEP": 2
+}, {
+	"ID": 1401,
+	"NAME": "市辖区",
+	"PARENT_ID": 14,
+	"DEEP": 2
+}, {
+	"ID": 1402,
+	"NAME": "龙湖区",
+	"PARENT_ID": 14,
+	"DEEP": 2
+}, {
+	"ID": 1403,
+	"NAME": "金平区",
+	"PARENT_ID": 14,
+	"DEEP": 2
+}, {
+	"ID": 1404,
+	"NAME": "濠江区",
+	"PARENT_ID": 14,
+	"DEEP": 2
+}, {
+	"ID": 1405,
+	"NAME": "潮阳区",
+	"PARENT_ID": 14,
+	"DEEP": 2
+}, {
+	"ID": 1406,
+	"NAME": "潮南区",
+	"PARENT_ID": 14,
+	"DEEP": 2
+}, {
+	"ID": 1407,
+	"NAME": "澄海区",
+	"PARENT_ID": 14,
+	"DEEP": 2
+}, {
+	"ID": 1408,
+	"NAME": "南澳县",
+	"PARENT_ID": 14,
+	"DEEP": 2
+}, {
+	"ID": 1501,
+	"NAME": "市辖区",
+	"PARENT_ID": 15,
+	"DEEP": 2
+}, {
+	"ID": 1502,
+	"NAME": "禅城区",
+	"PARENT_ID": 15,
+	"DEEP": 2
+}, {
+	"ID": 1503,
+	"NAME": "南海区",
+	"PARENT_ID": 15,
+	"DEEP": 2
+}, {
+	"ID": 1504,
+	"NAME": "顺德区",
+	"PARENT_ID": 15,
+	"DEEP": 2
+}, {
+	"ID": 1505,
+	"NAME": "三水区",
+	"PARENT_ID": 15,
+	"DEEP": 2
+}, {
+	"ID": 1506,
+	"NAME": "高明区",
+	"PARENT_ID": 15,
+	"DEEP": 2
+}, {
+	"ID": 1601,
+	"NAME": "市辖区",
+	"PARENT_ID": 16,
+	"DEEP": 2
+}, {
+	"ID": 1602,
+	"NAME": "江门市侦查大队",
+	"PARENT_ID": 16,
+	"DEEP": 2
+}, {
+	"ID": 1603,
+	"NAME": "蓬江区",
+	"PARENT_ID": 16,
+	"DEEP": 2
+}, {
+	"ID": 1604,
+	"NAME": "江海区",
+	"PARENT_ID": 16,
+	"DEEP": 2
+}, {
+	"ID": 1605,
+	"NAME": "新会区",
+	"PARENT_ID": 16,
+	"DEEP": 2
+}, {
+	"ID": 1606,
+	"NAME": "台山市",
+	"PARENT_ID": 16,
+	"DEEP": 2
+}, {
+	"ID": 1607,
+	"NAME": "开平市",
+	"PARENT_ID": 16,
+	"DEEP": 2
+}, {
+	"ID": 1608,
+	"NAME": "鹤山市",
+	"PARENT_ID": 16,
+	"DEEP": 2
+}, {
+	"ID": 1609,
+	"NAME": "恩平市",
+	"PARENT_ID": 16,
+	"DEEP": 2
+}, {
+	"ID": 1610,
+	"NAME": "高速一大队",
+	"PARENT_ID": 16,
+	"DEEP": 2
+}, {
+	"ID": 1611,
+	"NAME": "高速二大队",
+	"PARENT_ID": 16,
+	"DEEP": 2
+}, {
+	"ID": 1612,
+	"NAME": "高速三大队",
+	"PARENT_ID": 16,
+	"DEEP": 2
+}, {
+	"ID": 1701,
+	"NAME": "市辖区",
+	"PARENT_ID": 17,
+	"DEEP": 2
+}, {
+	"ID": 1702,
+	"NAME": "赤坎区",
+	"PARENT_ID": 17,
+	"DEEP": 2
+}, {
+	"ID": 1703,
+	"NAME": "霞山区",
+	"PARENT_ID": 17,
+	"DEEP": 2
+}, {
+	"ID": 1704,
+	"NAME": "坡头区",
+	"PARENT_ID": 17,
+	"DEEP": 2
+}, {
+	"ID": 1705,
+	"NAME": "机动大队虚拟区",
+	"PARENT_ID": 17,
+	"DEEP": 2
+}, {
+	"ID": 1706,
+	"NAME": "麻章区",
+	"PARENT_ID": 17,
+	"DEEP": 2
+}, {
+	"ID": 1707,
+	"NAME": "原麻章大队事故上虚拟区",
+	"PARENT_ID": 17,
+	"DEEP": 2
+}, {
+	"ID": 1708,
+	"NAME": "高速一",
+	"PARENT_ID": 17,
+	"DEEP": 2
+}, {
+	"ID": 1709,
+	"NAME": "东海试验区",
+	"PARENT_ID": 17,
+	"DEEP": 2
+}, {
+	"ID": 1710,
+	"NAME": "湛港大队虚拟区",
+	"PARENT_ID": 17,
+	"DEEP": 2
+}, {
+	"ID": 1711,
+	"NAME": "机场大队虚拟区",
+	"PARENT_ID": 17,
+	"DEEP": 2
+}, {
+	"ID": 1712,
+	"NAME": "海东大队虚拟区",
+	"PARENT_ID": 17,
+	"DEEP": 2
+}, {
+	"ID": 1713,
+	"NAME": "遂溪县",
+	"PARENT_ID": 17,
+	"DEEP": 2
+}, {
+	"ID": 1714,
+	"NAME": "徐闻县",
+	"PARENT_ID": 17,
+	"DEEP": 2
+}, {
+	"ID": 1715,
+	"NAME": "侦查大队虚拟区",
+	"PARENT_ID": 17,
+	"DEEP": 2
+}, {
+	"ID": 1716,
+	"NAME": "高速二",
+	"PARENT_ID": 17,
+	"DEEP": 2
+}, {
+	"ID": 1717,
+	"NAME": "廉江市",
+	"PARENT_ID": 17,
+	"DEEP": 2
+}, {
+	"ID": 1718,
+	"NAME": "雷州市",
+	"PARENT_ID": 17,
+	"DEEP": 2
+}, {
+	"ID": 1719,
+	"NAME": "吴川市",
+	"PARENT_ID": 17,
+	"DEEP": 2
+}, {
+	"ID": 1801,
+	"NAME": "市辖区",
+	"PARENT_ID": 18,
+	"DEEP": 2
+}, {
+	"ID": 1802,
+	"NAME": "茂南区",
+	"PARENT_ID": 18,
+	"DEEP": 2
+}, {
+	"ID": 1803,
+	"NAME": "茂港区",
+	"PARENT_ID": 18,
+	"DEEP": 2
+}, {
+	"ID": 1804,
+	"NAME": "电白县",
+	"PARENT_ID": 18,
+	"DEEP": 2
+}, {
+	"ID": 1805,
+	"NAME": "高州市",
+	"PARENT_ID": 18,
+	"DEEP": 2
+}, {
+	"ID": 1806,
+	"NAME": "化州市",
+	"PARENT_ID": 18,
+	"DEEP": 2
+}, {
+	"ID": 1807,
+	"NAME": "信宜市",
+	"PARENT_ID": 18,
+	"DEEP": 2
+}, {
+	"ID": 1808,
+	"NAME": "高速公路",
+	"PARENT_ID": 18,
+	"DEEP": 2
+}, {
+	"ID": 1901,
+	"NAME": "市辖区",
+	"PARENT_ID": 19,
+	"DEEP": 2
+}, {
+	"ID": 1902,
+	"NAME": "端州区",
+	"PARENT_ID": 19,
+	"DEEP": 2
+}, {
+	"ID": 1903,
+	"NAME": "鼎湖区",
+	"PARENT_ID": 19,
+	"DEEP": 2
+}, {
+	"ID": 1904,
+	"NAME": "机动巡逻大队",
+	"PARENT_ID": 19,
+	"DEEP": 2
+}, {
+	"ID": 1905,
+	"NAME": "广宁县",
+	"PARENT_ID": 19,
+	"DEEP": 2
+}, {
+	"ID": 1906,
+	"NAME": "怀集县",
+	"PARENT_ID": 19,
+	"DEEP": 2
+}, {
+	"ID": 1907,
+	"NAME": "封开县",
+	"PARENT_ID": 19,
+	"DEEP": 2
+}, {
+	"ID": 1908,
+	"NAME": "德庆县",
+	"PARENT_ID": 19,
+	"DEEP": 2
+}, {
+	"ID": 1909,
+	"NAME": "高要市",
+	"PARENT_ID": 19,
+	"DEEP": 2
+}, {
+	"ID": 1910,
+	"NAME": "四会市",
+	"PARENT_ID": 19,
+	"DEEP": 2
+}, {
+	"ID": 1911,
+	"NAME": "高速第一大队",
+	"PARENT_ID": 19,
+	"DEEP": 2
+}, {
+	"ID": 1912,
+	"NAME": "高速第二大队",
+	"PARENT_ID": 19,
+	"DEEP": 2
+}, {
+	"ID": 2001,
+	"NAME": "市辖区",
+	"PARENT_ID": 20,
+	"DEEP": 2
+}, {
+	"ID": 2002,
+	"NAME": "惠城区",
+	"PARENT_ID": 20,
+	"DEEP": 2
+}, {
+	"ID": 2003,
+	"NAME": "惠阳区",
+	"PARENT_ID": 20,
+	"DEEP": 2
+}, {
+	"ID": 2004,
+	"NAME": "惠城江东辖区",
+	"PARENT_ID": 20,
+	"DEEP": 2
+}, {
+	"ID": 2005,
+	"NAME": "惠州市大亚湾区",
+	"PARENT_ID": 20,
+	"DEEP": 2
+}, {
+	"ID": 2006,
+	"NAME": "惠州仲恺辖区",
+	"PARENT_ID": 20,
+	"DEEP": 2
+}, {
+	"ID": 2007,
+	"NAME": "博罗县",
+	"PARENT_ID": 20,
+	"DEEP": 2
+}, {
+	"ID": 2008,
+	"NAME": "惠东县",
+	"PARENT_ID": 20,
+	"DEEP": 2
+}, {
+	"ID": 2009,
+	"NAME": "龙门县",
+	"PARENT_ID": 20,
+	"DEEP": 2
+}, {
+	"ID": 2010,
+	"NAME": "惠州高一大队辖区",
+	"PARENT_ID": 20,
+	"DEEP": 2
+}, {
+	"ID": 2011,
+	"NAME": "惠州高二大队辖区",
+	"PARENT_ID": 20,
+	"DEEP": 2
+}, {
+	"ID": 2012,
+	"NAME": "惠州高三大队辖区",
+	"PARENT_ID": 20,
+	"DEEP": 2
+}, {
+	"ID": 2013,
+	"NAME": "惠州高四大队辖区",
+	"PARENT_ID": 20,
+	"DEEP": 2
+}, {
+	"ID": 2101,
+	"NAME": "市辖区",
+	"PARENT_ID": 21,
+	"DEEP": 2
+}, {
+	"ID": 2102,
+	"NAME": "梅江区",
+	"PARENT_ID": 21,
+	"DEEP": 2
+}, {
+	"ID": 2103,
+	"NAME": "梅县",
+	"PARENT_ID": 21,
+	"DEEP": 2
+}, {
+	"ID": 2104,
+	"NAME": "大埔县",
+	"PARENT_ID": 21,
+	"DEEP": 2
+}, {
+	"ID": 2105,
+	"NAME": "丰顺县",
+	"PARENT_ID": 21,
+	"DEEP": 2
+}, {
+	"ID": 2106,
+	"NAME": "五华县",
+	"PARENT_ID": 21,
+	"DEEP": 2
+}, {
+	"ID": 2107,
+	"NAME": "平远县",
+	"PARENT_ID": 21,
+	"DEEP": 2
+}, {
+	"ID": 2108,
+	"NAME": "蕉岭县",
+	"PARENT_ID": 21,
+	"DEEP": 2
+}, {
+	"ID": 2109,
+	"NAME": "兴宁市",
+	"PARENT_ID": 21,
+	"DEEP": 2
+}, {
+	"ID": 2110,
+	"NAME": "高速公路一大队",
+	"PARENT_ID": 21,
+	"DEEP": 2
+}, {
+	"ID": 2111,
+	"NAME": "高速公路二大队",
+	"PARENT_ID": 21,
+	"DEEP": 2
+}, {
+	"ID": 2112,
+	"NAME": "高速公路三大队",
+	"PARENT_ID": 21,
+	"DEEP": 2
+}, {
+	"ID": 2201,
+	"NAME": "市辖区",
+	"PARENT_ID": 22,
+	"DEEP": 2
+}, {
+	"ID": 2202,
+	"NAME": "城区",
+	"PARENT_ID": 22,
+	"DEEP": 2
+}, {
+	"ID": 2203,
+	"NAME": "海丰县",
+	"PARENT_ID": 22,
+	"DEEP": 2
+}, {
+	"ID": 2204,
+	"NAME": "陆河县",
+	"PARENT_ID": 22,
+	"DEEP": 2
+}, {
+	"ID": 2205,
+	"NAME": "陆丰市",
+	"PARENT_ID": 22,
+	"DEEP": 2
+}, {
+	"ID": 2206,
+	"NAME": "埔边高速公路大队辖区",
+	"PARENT_ID": 22,
+	"DEEP": 2
+}, {
+	"ID": 2207,
+	"NAME": "龙山高速公路大队辖区",
+	"PARENT_ID": 22,
+	"DEEP": 2
+}, {
+	"ID": 2301,
+	"NAME": "市辖区",
+	"PARENT_ID": 23,
+	"DEEP": 2
+}, {
+	"ID": 2302,
+	"NAME": "源城区",
+	"PARENT_ID": 23,
+	"DEEP": 2
+}, {
+	"ID": 2303,
+	"NAME": "紫金县",
+	"PARENT_ID": 23,
+	"DEEP": 2
+}, {
+	"ID": 2304,
+	"NAME": "龙川县",
+	"PARENT_ID": 23,
+	"DEEP": 2
+}, {
+	"ID": 2305,
+	"NAME": "连平县",
+	"PARENT_ID": 23,
+	"DEEP": 2
+}, {
+	"ID": 2306,
+	"NAME": "和平县",
+	"PARENT_ID": 23,
+	"DEEP": 2
+}, {
+	"ID": 2307,
+	"NAME": "东源县",
+	"PARENT_ID": 23,
+	"DEEP": 2
+}, {
+	"ID": 2308,
+	"NAME": "高速一大队",
+	"PARENT_ID": 23,
+	"DEEP": 2
+}, {
+	"ID": 2309,
+	"NAME": "高速二大队",
+	"PARENT_ID": 23,
+	"DEEP": 2
+}, {
+	"ID": 2401,
+	"NAME": "市辖区",
+	"PARENT_ID": 24,
+	"DEEP": 2
+}, {
+	"ID": 2402,
+	"NAME": "江城区",
+	"PARENT_ID": 24,
+	"DEEP": 2
+}, {
+	"ID": 2403,
+	"NAME": "阳江市沿海高速公路交警大队辖区",
+	"PARENT_ID": 24,
+	"DEEP": 2
+}, {
+	"ID": 2404,
+	"NAME": "阳江市开阳高速公路交警大队辖区",
+	"PARENT_ID": 24,
+	"DEEP": 2
+}, {
+	"ID": 2405,
+	"NAME": "阳江市郊区",
+	"PARENT_ID": 24,
+	"DEEP": 2
+}, {
+	"ID": 2406,
+	"NAME": "阳江市云阳高速公路交警大队辖区",
+	"PARENT_ID": 24,
+	"DEEP": 2
+}, {
+	"ID": 2407,
+	"NAME": "阳西县",
+	"PARENT_ID": 24,
+	"DEEP": 2
+}, {
+	"ID": 2408,
+	"NAME": "阳东县",
+	"PARENT_ID": 24,
+	"DEEP": 2
+}, {
+	"ID": 2409,
+	"NAME": "阳春市",
+	"PARENT_ID": 24,
+	"DEEP": 2
+}, {
+	"ID": 2501,
+	"NAME": "市辖区",
+	"PARENT_ID": 25,
+	"DEEP": 2
+}, {
+	"ID": 2502,
+	"NAME": "清城区",
+	"PARENT_ID": 25,
+	"DEEP": 2
+}, {
+	"ID": 2503,
+	"NAME": "佛冈县",
+	"PARENT_ID": 25,
+	"DEEP": 2
+}, {
+	"ID": 2504,
+	"NAME": "阳山县",
+	"PARENT_ID": 25,
+	"DEEP": 2
+}, {
+	"ID": 2505,
+	"NAME": "连山壮族瑶族自治县",
+	"PARENT_ID": 25,
+	"DEEP": 2
+}, {
+	"ID": 2506,
+	"NAME": "连南瑶族自治县",
+	"PARENT_ID": 25,
+	"DEEP": 2
+}, {
+	"ID": 2507,
+	"NAME": "清新县",
+	"PARENT_ID": 25,
+	"DEEP": 2
+}, {
+	"ID": 2508,
+	"NAME": "英德市",
+	"PARENT_ID": 25,
+	"DEEP": 2
+}, {
+	"ID": 2509,
+	"NAME": "连州市",
+	"PARENT_ID": 25,
+	"DEEP": 2
+}, {
+	"ID": 2510,
+	"NAME": "清远支队高速公路一大队",
+	"PARENT_ID": 25,
+	"DEEP": 2
+}, {
+	"ID": 2511,
+	"NAME": "清远支队高速公路二大队",
+	"PARENT_ID": 25,
+	"DEEP": 2
+}, {
+	"ID": 2512,
+	"NAME": "清远支队高速公路三大队",
+	"PARENT_ID": 25,
+	"DEEP": 2
+}, {
+	"ID": 2513,
+	"NAME": "清远支队高速公路四大队",
+	"PARENT_ID": 25,
+	"DEEP": 2
+}, {
+	"ID": 2601,
+	"NAME": "东莞市莞城区",
+	"PARENT_ID": 26,
+	"DEEP": 2
+}, {
+	"ID": 2602,
+	"NAME": "东莞市大朗镇",
+	"PARENT_ID": 26,
+	"DEEP": 2
+}, {
+	"ID": 2603,
+	"NAME": "东莞市樟木头镇",
+	"PARENT_ID": 26,
+	"DEEP": 2
+}, {
+	"ID": 2604,
+	"NAME": "东莞市石龙镇",
+	"PARENT_ID": 26,
+	"DEEP": 2
+}, {
+	"ID": 2605,
+	"NAME": "东莞市中堂镇",
+	"PARENT_ID": 26,
+	"DEEP": 2
+}, {
+	"ID": 2606,
+	"NAME": "东莞市虎门镇",
+	"PARENT_ID": 26,
+	"DEEP": 2
+}, {
+	"ID": 2607,
+	"NAME": "东莞市高速公路",
+	"PARENT_ID": 26,
+	"DEEP": 2
+}, {
+	"ID": 2608,
+	"NAME": "东莞市太平高速公路",
+	"PARENT_ID": 26,
+	"DEEP": 2
+}, {
+	"ID": 2609,
+	"NAME": "东莞市松山湖",
+	"PARENT_ID": 26,
+	"DEEP": 2
+}, {
+	"ID": 2610,
+	"NAME": "东莞市凤岗镇",
+	"PARENT_ID": 26,
+	"DEEP": 2
+}, {
+	"ID": 2611,
+	"NAME": "东莞市谢岗镇",
+	"PARENT_ID": 26,
+	"DEEP": 2
+}, {
+	"ID": 2612,
+	"NAME": "东莞市桥头镇",
+	"PARENT_ID": 26,
+	"DEEP": 2
+}, {
+	"ID": 2613,
+	"NAME": "东莞市塘厦镇",
+	"PARENT_ID": 26,
+	"DEEP": 2
+}, {
+	"ID": 2614,
+	"NAME": "东莞市大岭山镇",
+	"PARENT_ID": 26,
+	"DEEP": 2
+}, {
+	"ID": 2615,
+	"NAME": "东莞市东坑镇",
+	"PARENT_ID": 26,
+	"DEEP": 2
+}, {
+	"ID": 2616,
+	"NAME": "东莞市常平镇",
+	"PARENT_ID": 26,
+	"DEEP": 2
+}, {
+	"ID": 2617,
+	"NAME": "东莞市寮步镇",
+	"PARENT_ID": 26,
+	"DEEP": 2
+}, {
+	"ID": 2618,
+	"NAME": "东莞市横沥镇",
+	"PARENT_ID": 26,
+	"DEEP": 2
+}, {
+	"ID": 2619,
+	"NAME": "东莞市南城区",
+	"PARENT_ID": 26,
+	"DEEP": 2
+}, {
+	"ID": 2620,
+	"NAME": "东莞市石碣镇",
+	"PARENT_ID": 26,
+	"DEEP": 2
+}, {
+	"ID": 2621,
+	"NAME": "东莞市石排镇",
+	"PARENT_ID": 26,
+	"DEEP": 2
+}, {
+	"ID": 2622,
+	"NAME": "东莞市企石镇",
+	"PARENT_ID": 26,
+	"DEEP": 2
+}, {
+	"ID": 2623,
+	"NAME": "东莞市茶山镇",
+	"PARENT_ID": 26,
+	"DEEP": 2
+}, {
+	"ID": 2624,
+	"NAME": "东莞市黄江镇",
+	"PARENT_ID": 26,
+	"DEEP": 2
+}, {
+	"ID": 2625,
+	"NAME": "东莞市厚街镇",
+	"PARENT_ID": 26,
+	"DEEP": 2
+}, {
+	"ID": 2626,
+	"NAME": "东莞市长安镇",
+	"PARENT_ID": 26,
+	"DEEP": 2
+}, {
+	"ID": 2627,
+	"NAME": "东莞市沙田镇",
+	"PARENT_ID": 26,
+	"DEEP": 2
+}, {
+	"ID": 2628,
+	"NAME": "东莞市万江区",
+	"PARENT_ID": 26,
+	"DEEP": 2
+}, {
+	"ID": 2629,
+	"NAME": "东莞市道滘镇",
+	"PARENT_ID": 26,
+	"DEEP": 2
+}, {
+	"ID": 2630,
+	"NAME": "东莞市洪梅镇",
+	"PARENT_ID": 26,
+	"DEEP": 2
+}, {
+	"ID": 2631,
+	"NAME": "东莞市高埗镇",
+	"PARENT_ID": 26,
+	"DEEP": 2
+}, {
+	"ID": 2632,
+	"NAME": "公关是麻涌镇",
+	"PARENT_ID": 26,
+	"DEEP": 2
+}, {
+	"ID": 2633,
+	"NAME": "东莞市望牛墩镇",
+	"PARENT_ID": 26,
+	"DEEP": 2
+}, {
+	"ID": 2634,
+	"NAME": "东莞市清溪镇",
+	"PARENT_ID": 26,
+	"DEEP": 2
+}, {
+	"ID": 2635,
+	"NAME": "东莞市东城区",
+	"PARENT_ID": 26,
+	"DEEP": 2
+}, {
+	"ID": 2636,
+	"NAME": "东莞市虎门港",
+	"PARENT_ID": 26,
+	"DEEP": 2
+}, {
+	"ID": 2701,
+	"NAME": "石岐区",
+	"PARENT_ID": 27,
+	"DEEP": 2
+}, {
+	"ID": 2702,
+	"NAME": "东区",
+	"PARENT_ID": 27,
+	"DEEP": 2
+}, {
+	"ID": 2703,
+	"NAME": "火炬开发区",
+	"PARENT_ID": 27,
+	"DEEP": 2
+}, {
+	"ID": 2704,
+	"NAME": "西区",
+	"PARENT_ID": 27,
+	"DEEP": 2
+}, {
+	"ID": 2705,
+	"NAME": "南区",
+	"PARENT_ID": 27,
+	"DEEP": 2
+}, {
+	"ID": 2706,
+	"NAME": "五桂山",
+	"PARENT_ID": 27,
+	"DEEP": 2
+}, {
+	"ID": 2707,
+	"NAME": "小榄镇",
+	"PARENT_ID": 27,
+	"DEEP": 2
+}, {
+	"ID": 2708,
+	"NAME": "黄圃镇",
+	"PARENT_ID": 27,
+	"DEEP": 2
+}, {
+	"ID": 2709,
+	"NAME": "民众镇",
+	"PARENT_ID": 27,
+	"DEEP": 2
+}, {
+	"ID": 2710,
+	"NAME": "东凤镇",
+	"PARENT_ID": 27,
+	"DEEP": 2
+}, {
+	"ID": 2711,
+	"NAME": "东升镇",
+	"PARENT_ID": 27,
+	"DEEP": 2
+}, {
+	"ID": 2712,
+	"NAME": "古镇镇",
+	"PARENT_ID": 27,
+	"DEEP": 2
+}, {
+	"ID": 2713,
+	"NAME": "沙溪镇",
+	"PARENT_ID": 27,
+	"DEEP": 2
+}, {
+	"ID": 2714,
+	"NAME": "坦洲镇",
+	"PARENT_ID": 27,
+	"DEEP": 2
+}, {
+	"ID": 2715,
+	"NAME": "港口镇",
+	"PARENT_ID": 27,
+	"DEEP": 2
+}, {
+	"ID": 2716,
+	"NAME": "三角镇",
+	"PARENT_ID": 27,
+	"DEEP": 2
+}, {
+	"ID": 2717,
+	"NAME": "横栏镇",
+	"PARENT_ID": 27,
+	"DEEP": 2
+}, {
+	"ID": 2718,
+	"NAME": "南头镇",
+	"PARENT_ID": 27,
+	"DEEP": 2
+}, {
+	"ID": 2719,
+	"NAME": "阜沙镇",
+	"PARENT_ID": 27,
+	"DEEP": 2
+}, {
+	"ID": 2720,
+	"NAME": "南朗镇",
+	"PARENT_ID": 27,
+	"DEEP": 2
+}, {
+	"ID": 2721,
+	"NAME": "三乡镇",
+	"PARENT_ID": 27,
+	"DEEP": 2
+}, {
+	"ID": 2722,
+	"NAME": "板芙镇",
+	"PARENT_ID": 27,
+	"DEEP": 2
+}, {
+	"ID": 2723,
+	"NAME": "大涌镇",
+	"PARENT_ID": 27,
+	"DEEP": 2
+}, {
+	"ID": 2724,
+	"NAME": "神湾镇",
+	"PARENT_ID": 27,
+	"DEEP": 2
+}, {
+	"ID": 2725,
+	"NAME": "中山高速",
+	"PARENT_ID": 27,
+	"DEEP": 2
+}, {
+	"ID": 2801,
+	"NAME": "市辖区",
+	"PARENT_ID": 28,
+	"DEEP": 2
+}, {
+	"ID": 2802,
+	"NAME": "湘桥区",
+	"PARENT_ID": 28,
+	"DEEP": 2
+}, {
+	"ID": 2803,
+	"NAME": "潮安县",
+	"PARENT_ID": 28,
+	"DEEP": 2
+}, {
+	"ID": 2804,
+	"NAME": "饶平县",
+	"PARENT_ID": 28,
+	"DEEP": 2
+}, {
+	"ID": 2805,
+	"NAME": "高速",
+	"PARENT_ID": 28,
+	"DEEP": 2
+}, {
+	"ID": 2806,
+	"NAME": "高速一大队",
+	"PARENT_ID": 28,
+	"DEEP": 2
+}, {
+	"ID": 2807,
+	"NAME": "高速二大队",
+	"PARENT_ID": 28,
+	"DEEP": 2
+}, {
+	"ID": 2901,
+	"NAME": "市辖区",
+	"PARENT_ID": 29,
+	"DEEP": 2
+}, {
+	"ID": 2902,
+	"NAME": "榕城区",
+	"PARENT_ID": 29,
+	"DEEP": 2
+}, {
+	"ID": 2903,
+	"NAME": "揭阳市经济开发试验区",
+	"PARENT_ID": 29,
+	"DEEP": 2
+}, {
+	"ID": 2904,
+	"NAME": "机动巡逻大队辖区",
+	"PARENT_ID": 29,
+	"DEEP": 2
+}, {
+	"ID": 2905,
+	"NAME": "侦察大队辖区",
+	"PARENT_ID": 29,
+	"DEEP": 2
+}, {
+	"ID": 2906,
+	"NAME": "揭东县",
+	"PARENT_ID": 29,
+	"DEEP": 2
+}, {
+	"ID": 2907,
+	"NAME": "揭西县",
+	"PARENT_ID": 29,
+	"DEEP": 2
+}, {
+	"ID": 2908,
+	"NAME": "惠来县",
+	"PARENT_ID": 29,
+	"DEEP": 2
+}, {
+	"ID": 2909,
+	"NAME": "普宁市",
+	"PARENT_ID": 29,
+	"DEEP": 2
+}, {
+	"ID": 2910,
+	"NAME": "普惠高速辖区",
+	"PARENT_ID": 29,
+	"DEEP": 2
+}, {
+	"ID": 2911,
+	"NAME": "惠来高速辖区",
+	"PARENT_ID": 29,
+	"DEEP": 2
+}, {
+	"ID": 2912,
+	"NAME": "揭东高速辖区",
+	"PARENT_ID": 29,
+	"DEEP": 2
+}, {
+	"ID": 3001,
+	"NAME": "市辖区",
+	"PARENT_ID": 30,
+	"DEEP": 2
+}, {
+	"ID": 3002,
+	"NAME": "云城区",
+	"PARENT_ID": 30,
+	"DEEP": 2
+}, {
+	"ID": 3003,
+	"NAME": "新兴县",
+	"PARENT_ID": 30,
+	"DEEP": 2
+}, {
+	"ID": 3004,
+	"NAME": "郁南县",
+	"PARENT_ID": 30,
+	"DEEP": 2
+}, {
+	"ID": 3005,
+	"NAME": "云安县",
+	"PARENT_ID": 30,
+	"DEEP": 2
+}, {
+	"ID": 3006,
+	"NAME": "罗定市",
+	"PARENT_ID": 30,
+	"DEEP": 2
+}, {
+	"ID": 3007,
+	"NAME": "市高速二大队",
+	"PARENT_ID": 30,
+	"DEEP": 2
+}, {
+	"ID": 3008,
+	"NAME": "市高速一大队",
+	"PARENT_ID": 30,
+	"DEEP": 2
+}];

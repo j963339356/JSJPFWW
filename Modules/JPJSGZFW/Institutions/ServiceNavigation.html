@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>服务导航</title>
+		<link rel="stylesheet" href="../../../StaticResource/Theme2/Css/style.css" type="text/css">
+		<link rel="stylesheet" href="../../../StaticResource/Theme2/Js/layui/css/layui.css" type="text/css">
+		<style type="text/css">
+			.BMap_cpyCtrl {
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- begin of header -->
+		<header>
+			<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+			<html>
+				<head>
+					<meta charset="utf-8">
+					<title>广东省驾驶培训公众服务网</title>
+					<link rel="stylesheet" href="../../../StaticResource/Theme2/Css/style.css" type="text/css">
+				</head>
+				<body>
+					<div class="nav">
+						<div class="nav_in">
+							<h1><img src="../../../StaticResource/Theme2/Img/bg.png" alt=""></h1>
+							<div class="mz">
+								<p>广东省驾驶培训公众服务网</p>
+								<p>Guangdong driving and training public service network</p>
+							</div>
+							<div class="login_in">
+								<div class="The-login"><a href="../Student/StudentLogin.html">学员服务</a></div>
+								<div class="The-login"><a href="">驾校服务</a></div>
+								<div class="The-login"><a href="">管理部门登录</a></div>
+							</div>
+						</div>
+						<div class="nav_b">
+							<ul id="nav_content">
+								<li class="current"><a href="../../../Index.html">首页</a></li>
+								<li><a href="../Info/Statute.html">政策法规</a></li>
+								<li><a href="">驾校信息公开</a>
+									<ul class="lst">
+										<li><a href="ServiceNavigation.html">服务导航</a></li>
+										<li><a href="Institutions.html">驾校查询</a></li>
+										<li><a href="Coaches.html">教练员查询</a></li>
+										<li><a href="CoachCar.html">教练车查询</a></li>
+									</ul>
+								</li>
+								<li><a href="../Info/News.html">通知公告</a></li>
+								<li><a href="../Info/BusinessGuide.html">业务指南</a></li>
+							</ul>
+						</div>
+					</div>
+				</body>
+				<script src="../../../StaticResource/Theme2/Js/jquery-1.10.2.min.js"></script>
+				<script src="../../../StaticResource/Theme2/Js/layer/layer.js"></script>
+				<script>
+					var ctx = '';
+					$(function(){
+						var currentNode=3;
+						$("#nav_content>li").each(function(index){
+							if((index+1)==currentNode){
+								$(this).addClass("current");
+							}else{
+								$(this).removeClass("current");
+							}
+						});
+					});
+					$(function(){	
+						$('#nav_content>li').hover(function(e) {
+							$(this).children('ul').stop().slideToggle();
+						});
+					});
+				</script>
+			</html>
+		</header>
+		<!-- end of header -->
+		<div class="driver service-navigation">
+			<div class="driver_in">
+				<div class="driver_t">
+					<p><a href="../../../Index.html">首页</a>><a href="ServiceNavigation.html">服务导航</a></p>
+				</div>
+				<div class="wrap">
+					<ul>
+						<li>
+							<p>选择市级</p>
+							<select name="" id="CityName">
+								<option value="">请选择市级</option>
+							</select>
+							<input type="hidden" id="hidCityName" />
+						</li>
+						<li>
+							<p>选择县区</p>
+							<select name="" id="CountyName">
+								<option value="">请选择县区</option>
+							</select>
+							<input type="hidden" id="hidCountyName" />
+						</li>
+						<li>
+							<p>驾培机构</p>
+							<select name="" id="CorpName">
+								<option value="">请选择驾培机构</option>
+							</select>
+							<input type="hidden" id="hidCorpName" />
+							<input type="hidden" id="hidCorpCode" />
+						</li>
+						<li>
+							<a href="#" class="query_btn" id="clear_coach">重置</a>
+							<a href="#" class="query_btn" id="query_coach">查询</a>
+						</li>
+					</ul>
+				</div>
+				<div class="wrap-map" id="corp_map"></div>
+			</div>
+		</div>
+
+
+		<!-- begin od footer -->
+		<footer>
+			<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+			<html>
+				<head>
+					<title>footer</title>
+					<link rel="stylesheet" href="../../../StaticResource/Theme2/Css/style.css" type="text/css">
+				</head>
+				<body>
+					<div class="footer">
+						<div class="footer_in">
+							<div class="lianjie">
+								<h2>友情链接</h2>
+								<ul>
+									<li><a href="http://www.mot.gov.cn/" target="_blank">中华人民共和国交通运输部</a></li>
+									<li><a href="http://www.mps.gov.cn/" target="_blank">中华人民共和国公安部</a></li>
+									<li><a href="http://gd.122.gov.cn/" target="_blank">交通安全综合服务管理平台</a></li>
+									<li><a href="https://www.cttic.cn/" target="_blank">中国交通通信信息中心</a></li>
+									<li><a href="http://www.crta.org.cn/" target="_blank">中国道路运输协会</a></li>
+								</ul>
+								<p>版权所有<br>© copyright 2010-2018. All rights reserved. <a href="http://www.miitbeian.gov.cn" target="_blank">粤ICP备09171042号-4</a></p>
+							</div>
+							<div class="erweima">
+								<img src="../../../StaticResource/Theme2/Img/erweima.png" width="100" height="102" alt="">
+								<p>扫一扫<br>关注微信公众号</p>
+							</div>
+						</div>
+					</div>
+				</body>
+			</html>
+		</footer>
+		<!-- end of footer -->
+		<script type="text/javascript" src="../../../StaticResource/Theme2/Js/jquery-1.8.2.min.js"></script>
+		<script type="text/javascript" src="../../../StaticResource/Theme2/Js/jquery.cokie.min.js"></script>
+		<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=BWi8oX0LR4OIU267WAQupPXk"></script>
+		<script src="../../../StaticResource/Theme2/Js/conwin.helper.js"></script>
+		<script src="Js/serviceNavigation.js"></script>
+		<script src="Js/cityJson.js"></script>
+		<script src="Js/countyJson.js"></script>
+	</body>
+</html>

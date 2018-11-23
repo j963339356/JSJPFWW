@@ -1,0 +1,72 @@
+
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>评价详情</title>
+<link rel="stylesheet" href="../../../StaticResource/Theme2/Css/registered-style.css" type="text/css">
+<link rel="stylesheet" href="../../../StaticResource/Theme2/Css/style.css" type="text/css">
+<link rel="stylesheet" href="../../../StaticResource/Theme2/Js/layui/css/layui.css" type="text/css">
+</head>
+
+<body>
+<input type="hidden" id="idCard" value="445300007504">
+<input type="hidden" id="stunum" value="0913483106459292">
+	<div class="complaint-details">
+		<div class="tsnr details-tsnr">
+			<table class="bgys">
+				<tr>
+					<td>评价人姓名</td>
+					<td colspan="3"><input type="text" value="张 * *" style="text-align:center"; readonly="readonly"></td>
+				</tr>
+				<tr>
+					<td>评价对象类型</td>
+					<td colspan="3"><input type="text" value="教练员" style="text-align:center"; readonly="readonly"></td>
+				</tr>
+				<tr class="">
+					<td>对象名称</td>
+					<td colspan="3"><input type="text" value="" style="text-align:center"; readonly="readonly"></td>
+				</tr>
+				<tr class="">
+					<td>培训部分</td>
+					<td colspan="3"><input type="text" value="第二部分" style="text-align:center"; readonly="readonly"></td>
+				</tr>
+				<tr class="">
+					<td>评价内容</td>
+					<td colspan="3"><textarea cols="3" style="text-align:center" readonly="readonly"></textarea></td>
+				</tr>
+				<tr class="">
+					<td>评价星级</td>
+					<td colspan="3"><input type="text" value="一星" style="text-align:center"; readonly="readonly"></td>
+				</tr>
+				<tr>
+					<td>评价日期</td>
+					<td colspan="3"><input type="text" value="2018-11-22 10:25:52" style="text-align:center"; readonly="readonly"></td>
+				</tr>
+			</table>
+			<div class="tsnr-an">
+				<button id="cancel">返回</button>
+			</div>
+		</div>
+	</div>
+	<script src="../../../StaticResource/Theme2/Js/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript" src="../../../StaticResource/Theme2/Js/jquery.cokie.min.js"></script>
+<script type="text/javascript">
+	$('#cancel').click(function() {
+		var index = parent.layer.getFrameIndex(window.name);
+		parent.layer.close(index);
+	});
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

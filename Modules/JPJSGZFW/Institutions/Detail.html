@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>驾校详情</title>
+		<link rel="stylesheet" href="../../../StaticResource/Theme2/Css/style.css" type="text/css">
+		<style type="text/css">
+			.anchorBL {
+				display: none
+			}
+		</style>
+	</head>
+	<body>
+		<!-- begin of header -->
+		<header>
+			<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+			<html>
+				<head>
+					<meta charset="utf-8">
+					<title>广东省驾驶培训公众服务网</title>
+					<link rel="stylesheet" href="../../../StaticResource/Theme2/Css/style.css" type="text/css">
+				</head>
+				<body>
+					<div class="nav">
+						<div class="nav_in">
+							<h1><img src="../../../StaticResource/Theme2/Img/bg.png" alt=""></h1>
+							<div class="mz">
+								<p>广东省驾驶培训公众服务网</p>
+								<p>Guangdong driving and training public service network</p>
+							</div>
+							<div class="login_in">
+								<div class="The-login"><a href="../Student/StudentLogin.html">学员服务</a></div>
+								<div class="The-login"><a href="">驾校服务</a></div>
+								<div class="The-login"><a href="">管理部门登录</a></div>
+							</div>
+						</div>
+						<div class="nav_b">
+							<ul id="nav_content">
+								<li class="current"><a href="../../../Index.html">首页</a></li>
+								<li><a href="../Info/Statute.html">政策法规</a></li>
+								<li><a href="">驾校信息公开</a>
+									<ul class="lst">
+										<li><a href="ServiceNavigation.html">服务导航</a></li>
+										<li><a href="Institutions.html">驾校查询</a></li>
+										<li><a href="Coaches.html">教练员查询</a></li>
+										<li><a href="CoachCar.html">教练车查询</a></li>
+									</ul>
+								</li>
+								<li><a href="../Info/News.html">通知公告</a></li>
+								<li><a href="../Info/BusinessGuide.html">业务指南</a></li>
+							</ul>
+						</div>
+					</div>
+				</body>
+				<script src="../../../StaticResource/Theme2/Js/jquery-1.10.2.min.js"></script>
+				<script src="../../../StaticResource/Theme2/Js/layer/layer.js"></script>
+				<script>
+					var ctx = '';
+					$(function(){
+						var currentNode=3;
+						$("#nav_content>li").each(function(index){
+							if((index+1)==currentNode){
+								$(this).addClass("current");
+							}else{
+								$(this).removeClass("current");
+							}
+						});
+					});
+					$(function(){	
+						$('#nav_content>li').hover(function(e) {
+							$(this).children('ul').stop().slideToggle();
+						});
+					});
+				</script>
+			</html>
+		</header>
+		<!-- end of header -->
+		<div class="driver-details">
+			<div class="driver_in">
+				<div class="driver_t">
+					<p><a href="../../../Index.html">首页</a>><a href="Detail.html">驾校查询</a>><a href="">驾校详情</a></p>
+				</div>
+			</div>
+			<div class="details">
+				<input id="longitude" type="hidden" value="" />
+				<input id="latitude" type="hidden" value="23.0" />
+				<div class="jianjie_b">
+					<ul>
+						<p style="font-size:24px;color:blue" id="corpFullName"></p>
+						<li><span>驾校编号：</span><label id="ins_code"></label></li>
+						<li><span>经营状态：</span><label id="busistatus_cn"></label></li>
+						<li><span>经营范围：</span><label id="busiscope"></label></li>
+						<li><span>分类等级：</span><label id="level_cn"></label></li>
+						<li><span>教练员：</span><label id="employee_num"></label></li>
+						<li><span>教练车：</span><label id="vehicle_num"></label></li>
+						<li><span>联系人：</span><label id="contact"></label></li>
+						<li><span>地址：</span><label id="address"></label></li>
+						<li>
+							<div class="xingxing">
+								<span>服务评价：</span>
+								<ul>
+									<li></li>
+									<li></li>
+									<li></li>
+									<li></li>
+									<li></li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div id="corp_map" style="height: 300px;width: 400px;float: left;margin-left:15px;"></div>
+			</div>
+			<div class="details-in">
+				<div class="tab">
+					<span class="tab-currtent">驾校简介</span>
+					<span>分支机构</span>
+					<span>收费标准</span>
+				</div>
+				<ul>
+					<!-- 驾校简介 -->
+					<li>
+						<div class="jianjie">
+							<p id="jianjie"></p>
+						</div>
+					</li>
+					<!-- 分支机构 -->
+					<li style="display:none">
+						<div class="fenxiao">
+							<table>
+								<tbody id="subList">
+								</tbody>
+							</table>
+						</div>
+					</li>
+					<!-- 收费标准 -->
+					<li style="display:none">
+						<div class="fenxiao">
+							<table>
+								<tbody id="payList">
+								</tbody>
+							</table>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- begin od footer -->
+		<footer>
+			<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+			<html>
+				<head>
+					<title>footer</title>
+					<link rel="stylesheet" href="../../../StaticResource/Theme2/Css/style.css" type="text/css">
+				</head>
+				<body>
+					<div class="footer">
+						<div class="footer_in">
+							<div class="lianjie">
+								<h2>友情链接</h2>
+								<ul>
+									<li><a href="http://www.mot.gov.cn/" target="_blank">中华人民共和国交通运输部</a></li>
+									<li><a href="http://www.mps.gov.cn/" target="_blank">中华人民共和国公安部</a></li>
+									<li><a href="http://gd.122.gov.cn/" target="_blank">交通安全综合服务管理平台</a></li>
+									<li><a href="https://www.cttic.cn/" target="_blank">中国交通通信信息中心</a></li>
+									<li><a href="http://www.crta.org.cn/" target="_blank">中国道路运输协会</a></li>
+								</ul>
+								<p>版权所有<br>© copyright 2010-2018. All rights reserved. <a href="http://www.miitbeian.gov.cn" target="_blank">粤ICP备09171042号-4</a></p>
+							</div>
+							<div class="erweima">
+								<img src="../../../StaticResource/Theme2/Img/erweima.png" width="100" height="102" alt="">
+								<p>扫一扫<br>关注微信公众号</p>
+							</div>
+						</div>
+					</div>
+				</body>
+			</html>
+		</footer>
+		<!-- end of footer -->
+		<!-- <script src="../../../StaticResource/Theme2/Js/jquery-1.10.2.min.js"></script> -->
+		<script src="../../../StaticResource/Theme2/Js/layer/layer.js"></script>
+		<script type="text/javascript" src="../../../StaticResource/Theme2/Js/jquery.cokie.min.js"></script>
+		<script src="../../../StaticResource/Theme2/Js/conwin.helper.js"></script>
+		<script src="http://api.map.baidu.com/api?v=2.0&amp;ak=BWi8oX0LR4OIU267WAQupPXk"></script>
+		<script src="../../../StaticResource/Theme2/Js/ma.js"></script>
+		<script src="Js/detail.js"></script>
+	</body>
+</html>

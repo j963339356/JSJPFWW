@@ -1,0 +1,87 @@
+
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>投诉详情</title>
+<link rel="stylesheet" href="../../../StaticResource/Theme2/Css/registered-style.css" type="text/css">
+<link rel="stylesheet" href="../../../StaticResource/Theme2/Css/style.css" type="text/css">
+<link rel="stylesheet" href="../../../StaticResource/Theme2/Js/layui/css/layui.css" type="text/css">
+<script src="../../../StaticResource/Theme2/Js/layui/layui.js" charset="utf-8"></script>
+<script type="text/javascript" src="../../../StaticResource/Theme2/Js/date/WdatePicker.js"></script>
+</head>
+
+<body>
+<input type="hidden" id="idCard" value="510230198208242320">
+<input type="hidden" id="stunum" value="">
+<input type="hidden" id="compId" value="47">
+<div class="complaint-details">
+	<div class="tsnr details-tsnr">
+             <table class="bgys">
+             	<tr>
+                     <td>投诉人姓名</td>
+                     <td colspan="3">张 * *</td>
+                 </tr>
+                 <tr>
+                     <td>投诉对象类型</td>
+                     <td colspan="3">教练员</td>
+                 </tr>
+                 <tr class="">
+                     <td>对象名称</td>
+                     <td colspan="3">王里</td>
+                 </tr>
+                 <tr class="">
+                     <td>本人联系电话</td>
+                     <td colspan="3">15520203030</td>
+                 </tr>
+                 <tr class="">
+                     <td>投诉内容</td>
+                     <td colspan="3">这个教练老是在车里抽烟，烟味太重了</td>
+                 </tr>
+                 <tr>
+                     <td>投诉记录日期</td>
+                     <td colspan="3">2018-11-22 10:32:15</td>
+                 </tr>
+                 <tr class="">
+                     <td>驾校意见处理</td>
+                     <td colspan="3"></td>
+                 </tr>
+                 <tr>
+                     <td sytle="width:25%">反馈人</td>
+                     <td sytle="width:25%"></td>
+                     <td sytle="width:25%">反馈日期</td>
+                     <td sytle="width:25%"></td>
+                 </tr>
+                 <tr>
+                     <td>管理部门处理意见</td>
+                     <td colspan="3"></td>
+                 </tr>
+                 <tr>
+                     <td>管理部门处理人</td>
+                     <td></td>
+                     <td>处理日期</td>
+                     <td></td>
+                 </tr>
+                 <tr>
+                     <td>备注</td>
+                     <td colspan="3"></td>
+                 </tr>
+             </table>
+             <div class="tsnr-an">
+                 <button id="closeBtn">返回</button>
+             </div>
+         </div>
+     </div>
+<script src="../../../StaticResource/Theme2/Js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="../../../StaticResource/Theme2/Js/jquery.cokie.min.js"></script>
+<script type="text/javascript">
+$('#closeBtn').click(function(){
+	var index = parent.layer.getFrameIndex(window.name); 
+	parent.layer.close(index);
+});
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>业务办理</title>
+		<link rel="stylesheet" href="../../../StaticResource/Theme2/Css/style.css" type="text/css">
+		<link rel="stylesheet" href="../../../StaticResource/Theme2/Css/registered-style.css" type="text/css">
+		<link rel="stylesheet" href="../../../StaticResource/Theme2/Js/layui/css/layui.css" type="text/css">
+		<style type="text/css">
+			.BMap_cpyCtrl {
+				display: none;
+			}
+		</style>
+		<style>
+			.layui-layer-title {
+				background-color: #2196F3 !important;
+				color: white !important;
+				font-size: 15px !important;
+				font-weight: bold !important;
+				height: 30px !important;
+				line-height: 30px !important;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- begin of header -->
+		<header>
+			<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+			<html>
+				<head>
+					<meta charset="utf-8">
+					<title>广东省驾驶培训公众服务网</title>
+					<link rel="stylesheet" href="../../../StaticResource/Theme2/Css/style.css" type="text/css">
+				</head>
+				<body>
+					<div class="nav">
+						<div class="nav_in">
+							<h1><img src="../../../StaticResource/Theme2/Img/bg.png" alt=""></h1>
+							<div class="mz">
+								<p>广东省驾驶培训公众服务网</p>
+								<p>Guangdong driving and training public service network</p>
+							</div>
+							<div class="login_in" style="display: none;">
+								<div class="The-login"><a href="../Student/StudentLogin.html">学员服务</a></div>
+								<div class="The-login"><a href="">驾校服务</a></div>
+								<div class="The-login"><a href="">管理部门登录</a></div>
+							</div>
+							<div class="nhhy" style="display: none;">
+								欢迎您：<span style="color:#F00">test</span>
+								<button id="exitBtn">退出登录</button>
+							</div>
+						</div>
+						<div class="nav_b">
+							<ul id="nav_content">
+								<li class="current"><a href="../../../Index.html">首页</a></li>
+								<li><a href="../Info/Statute.html">政策法规</a></li>
+								<li><a href="">驾校信息公开</a>
+									<ul class="lst">
+										<li><a href="ServiceNavigation.html">服务导航</a></li>
+										<li><a href="Institutions.html">驾校查询</a></li>
+										<li><a href="Coaches.html">教练员查询</a></li>
+										<li><a href="CoachCar.html">教练车查询</a></li>
+									</ul>
+								</li>
+								<li><a href="../Info/News.html">通知公告</a></li>
+								<li><a href="../Info/BusinessGuide.html">业务指南</a></li>
+							</ul>
+						</div>
+					</div>
+				</body>
+				<script src="../../../StaticResource/Theme2/Js/jquery-1.10.2.min.js"></script>
+				<script src="../../../StaticResource/Theme2/Js/layer/layer.js"></script>
+				<script>
+					var ctx = '';
+					$(function(){
+						var currentNode=-1;
+						$("#nav_content>li").each(function(index){
+							if((index+1)==currentNode){
+								$(this).addClass("current");
+							}else{
+								$(this).removeClass("current");
+							}
+						});
+					});
+					$(function(){	
+						$('#nav_content>li').hover(function(e) {
+							$(this).children('ul').stop().slideToggle();
+						});
+					});
+				</script>
+			</html>
+		</header>
+		<!-- end of header -->
+		<input type="hidden" id="idCard" value="510230198208242320">
+		<input type="hidden" id="stunum" value="0913483106459292">
+		<div class="grzl">
+			<div class="grzl_l">
+				<div class="grzl_t">
+					<span>基本信息管理</span>
+					<div class="grjb" id="basic" onclick="ToStudentInfo()">个人基本信息</div>
+				</div>
+				<div class="grzl_b">
+					<span>业务办理</span>
+					<div class="wypx" id="train">我的培训</div>
+					<div class="wypj" id="complain">我要投诉</div>
+					<div class="wyts" id="appraise">我要评价</div>
+				</div>
+			</div>
+			<div class="grzl_r">
+				<div class="my-training">
+					<div class="my-biaoti" style="background:url(../../../StaticResource/Theme2/Img/wdpx.png) no-repeat left center">我的培训</div>
+					<div class="my-cx">
+						<div class="my-cx-l">
+							<div class="pxjg">
+								<span>驾培机构</span>
+								<input type="text" id="corp">
+							</div>
+							<div class="pxbf">
+								<span>培训部分</span>
+								<select prompt="请选择培训部分" id="trainPhase">
+									<option value="">请选择培训部分</option>
+									<option value="1">第一部分</option>
+									<option value="2">第二部分</option>
+									<option value="3">第三部分</option>
+									<option value="4">第四部分</option>
+								</select>
+							</div>
+							<div class="jly">
+								<span>教练员</span>
+								<input type="text" id="coach">
+							</div>
+							<div class="sf">
+								<span>评价状态</span>
+								<select id="evaluate">
+									<option value="">请选择是否评价</option>
+									<option value="1">已评价</option>
+									<option value="0">未评价</option>
+								</select>
+							</div>
+						</div>
+						<div class="my-cx-r">
+							<button id="trainQuery">查&nbsp;&nbsp;&nbsp;&nbsp;询</button>
+							<button id="trainRest" style="background:#1ad4c3">重&nbsp;&nbsp;&nbsp;&nbsp;置</button>
+						</div>
+					</div>
+					<table class="layui-table" lay-filter="trainTable" id="myTraining" style="margin-top: -10px;">
+								<!-- <th lay-data="{field:'corp_name',align:'center',width:180,toolbar:'#corpTpl'}">驾培机构</th>
+								<th lay-data="{field:'coach_name',align:'center',width:80,toolbar:'#coachTpl'}">教练员</th>
+								<th lay-data="{field:'train_phase_cn',align:'center',width:80}">培训部分</th>
+								<th lay-data="{field:'start_time',align:'center',width:150,sort:true}">开始时间</th>
+								<th lay-data="{field:'end_time',align:'center',width:150,sort:true}">结束时间</th>
+								<th lay-data="{field:'duration',align:'center',width:100}">培训学时</th>
+								<th lay-data="{field:'last_valid_min',align:'center',width:100}">有效学时</th>
+								<th lay-data="{fixed:'right',align:'center',width:180,toolbar:'#barDemo'}">操作</th> -->
+					</table>
+				</div>
+				<div class="my-complaints" style="display:none;">
+					<div id="complaints-ta" class="complaints-tab">
+						<span class="cutton">我要投诉</span>
+						<span>历史投诉</span>
+					</div>
+					<ul id="complaints-l" class="complaints-lb">
+						<li class="cuttonm">
+							<div class="tsnr">
+								<table class="bgys">
+									<tr>
+										<td>投诉对象类型</td>
+										<td>
+											<select id="comType">
+												<option value="1">教练员</option>
+												<option value="2">驾培机构</option>
+											</select>
+										</td>
+									</tr>
+									<tr class="">
+										<td>对象名称</td>
+										<td style="position: relative;">
+											<input type="text" id="objectName" readonly="readonly">
+											<input type="hidden" id="objenum" readonly="readonly">
+											<div class="tsnr-jx" style="position: absolute;margin-top: 0;right:5px;">
+												<button style="width:80px;height:28px;" id="myCoach">我的教练</button>
+												<button style="width:80px;height:28px;" id="myCorp">我的驾校</button>
+											</div>
+										</td>
+									</tr>
+									<tr class="">
+										<td>本人联系电话</td>
+										<td><input type="text" id="perPhone" value="15520203030" readonly="readonly"></td>
+									</tr>
+									<tr class="">
+										<td>投诉内容<span style="color:red">*</span></td>
+										<td><textarea rows="5" cols="58" id="content"></textarea></td>
+									</tr>
+								</table>
+								<div class="tsnr-an">
+									<button id="comSumbit">提交</button>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="my-cx">
+								<div class="my-cx-l">
+									<div class="pxjg">
+										<span>投诉开始日期</span>
+										<input type="text" id="comStartDate" class="Wdate" style="margin-left: 20px;" onclick="var comEndDate=$dp.$('comEndDate');WdatePicker({onpicked:function(){comEndDate.click();},maxDate:new Date()})">
+									</div>
+									<div class="pxjg">
+										<span>驾培机构</span>
+										<input type="text" id="corp_name">
+									</div>
+									<div class="jly">
+										<span>投诉结束日期</span>
+										<input type="text" id="comEndDate" class="Wdate" style="margin-left: 20px;" onclick="WdatePicker({minDate:'#F{$dp.$D(\'comStartDate\')}',maxDate:new Date()});">
+									</div>
+									<div class="jly">
+										<span>教练员</span>
+										<input type="text" id="coach_name">
+									</div>
+
+
+								</div>
+								<div class="my-cx-r">
+									<button id="complaintQuery">查&nbsp;&nbsp;&nbsp;&nbsp;询</button>
+									<button id="complaintRest" style="background:#1ad4c3">重&nbsp;&nbsp;&nbsp;&nbsp;置</button>
+								</div>
+							</div>
+							<table class="layui-table" lay-filter="complaintTable" id="myComplaint" style="margin-top: -10px;">
+								<!-- <thead>
+									<tr>
+										<th lay-data="{field:'type_cn',align:'center',width:90}">投诉对象类型</th>
+										<th lay-data="{field:'name',align:'center',width:150}">对象名称</th>
+										<th lay-data="{field:'cdate',align:'center',width:120,sort: true}">投诉日期</th>
+										<th lay-data="{field:'content',align:'center',width:170}">投诉内容</th>
+										<th lay-data="{field:'schopinion',align:'center',width:150}">驾校处理意见</th>
+										<th lay-data="{field:'depaopinion',align:'center',width:150}">交管部门意见</th>
+										<th lay-data="{field:'status_cn',align:'center',width:90}">状态</th>
+										<th lay-data="{fixed:'right',width:90,align:'center',toolbar:'#compDetail'}">操作</th>
+									</tr>
+								</thead> -->
+							</table>
+						</li>
+					</ul>
+				</div>
+				<div class="my-appraise" style="display:none;">
+					<div id="appraise-tab" class="complaints-tab">
+						<span class="cutton">未评价驾校</span>
+						<span>未评价教练员</span>
+						<span>历史评价</span>
+					</div>
+					<input type="hidden" id="coachType" value="">
+					<ul id="appraise-lb" class="complaints-lb">
+						<li class="cuttonm">
+							<div class="wpj">
+								<table class="layui-table" lay-filter="noApprCorpTable" id="myNoApprCorpTable" style="margin-top: 0px;">
+									<!-- <thead>
+										<tr>
+											<th lay-data="{field:'corp_name',align:'center',width:220}">驾培机构</th>
+											<th lay-data="{field:'coach_name',align:'center',width:160}">教练员</th>
+											<th lay-data="{field:'train_phase_cn',align:'center',width:160}">培训部分</th>
+											<th lay-data="{field:'start_time',align:'center',width:180,sort:true}">开始时间</th>
+											<th lay-data="{field:'end_time',align:'center',width:180,sort:true}">结束时间</th>
+											<th lay-data="{fixed:'right',width:120,align:'center',toolbar:'#doAppraiseCorp'}">操作</th>
+										</tr>
+									</thead> -->
+								</table>
+							</div>
+						</li>
+						<li>
+							<div class="wpj" id="coachAppraise">
+								<table class="layui-table" lay-filter="noApprCoachTable" id="myNoApprCoachTable" style="margin-top: 0px;">
+									<!-- <thead>
+										<tr>
+											<th lay-data="{field:'corp_name',align:'center',width:220}">驾培机构</th>
+											<th lay-data="{field:'coach_name',align:'center',width:160}">教练员</th>
+											<th lay-data="{field:'train_phase_cn',align:'center',width:160}">培训部分</th>
+											<th lay-data="{field:'start_time',align:'center',width:180,sort:true}">开始时间</th>
+											<th lay-data="{field:'end_time',align:'center',width:180,sort:true}">结束时间</th>
+											<th lay-data="{fixed:'right',width:120,align:'center',toolbar:'#doAppraiseCoach'}">操作</th>
+										</tr>
+									</thead> -->
+								</table>
+							</div>
+
+						</li>
+						<li>
+							<div class="my-cx">
+								<div class="my-cx-l">
+									<div class="pxjg">
+										<span>评价开始日期</span>
+										<input type="text" id="apprStartDate" class="Wdate" style="margin-left: 20px;" onclick="var apprEndDate=$dp.$('apprEndDate');WdatePicker({onpicked:function(){apprEndDate.click();},maxDate:new Date()})">
+									</div>
+									<div class="pxjg">
+										<span>驾培机构</span>
+										<input type="text" id="apprCorp">
+									</div>
+									<div class="jly">
+										<span>评价结束日期</span>
+										<input type="text" id="apprEndDate" class="Wdate" style="margin-left: 20px;" onclick="WdatePicker({minDate:'#F{$dp.$D(\'apprStartDate\')}',maxDate:new Date()})">
+									</div>
+									<div class="jly">
+										<span>教练员</span>
+										<input type="text" id="apprCoach">
+									</div>
+
+								</div>
+								<div class="my-cx-r">
+									<button id="appraiseQuery">查&nbsp;&nbsp;&nbsp;&nbsp;询</button>
+									<button id="appraiseRest" style="background:#1ad4c3">重&nbsp;&nbsp;&nbsp;&nbsp;置</button>
+								</div>
+							</div>
+							<table class="layui-table" lay-filter="appraiseTable" id="myAppraiseTable" style="margin-top: -10px;">
+								<!-- <thead>
+									<tr>
+										<th lay-data="{field:'type_cn',align:'center',width:180}">评价类型</th>
+										<th lay-data="{field:'name',align:'center',width:260}">评价对象名称</th>
+										<th lay-data="{field:'part_cn',align:'center',width:160}">培训部分</th>
+										<th lay-data="{field:'evaluate_time',align:'center',width:180,sort: true}">评价日期</th>
+										<th lay-data="{field:'overall_cn',align:'center',width:120}">总体评价</th>
+										<th lay-data="{fixed:'right',width:120,align:'center',toolbar:'#apprDetail'}">操作</th>
+									</tr>
+								</thead> -->
+							</table>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<!-- begin od footer -->
+		<footer>
+			<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+			<html>
+				<head>
+					<title>footer</title>
+					<link rel="stylesheet" href="../../../StaticResource/Theme2/Css/style.css" type="text/css">
+				</head>
+				<body>
+					<div class="footer">
+						<div class="footer_in">
+							<div class="lianjie">
+								<h2>友情链接</h2>
+								<ul>
+									<li><a href="http://www.mot.gov.cn/" target="_blank">中华人民共和国交通运输部</a></li>
+									<li><a href="http://www.mps.gov.cn/" target="_blank">中华人民共和国公安部</a></li>
+									<li><a href="http://gd.122.gov.cn/" target="_blank">交通安全综合服务管理平台</a></li>
+									<li><a href="https://www.cttic.cn/" target="_blank">中国交通通信信息中心</a></li>
+									<li><a href="http://www.crta.org.cn/" target="_blank">中国道路运输协会</a></li>
+								</ul>
+								<p>版权所有<br>© copyright 2010-2018. All rights reserved. <a href="http://www.miitbeian.gov.cn" target="_blank">粤ICP备09171042号-4</a></p>
+							</div>
+							<div class="erweima">
+								<img src="../../../StaticResource/Theme2/Img/erweima.png" width="100" height="102" alt="">
+								<p>扫一扫<br>关注微信公众号</p>
+							</div>
+						</div>
+					</div>
+				</body>
+			</html>
+		</footer>
+		<!-- end of footer -->
+		<script type="text/javascript" src="../../../StaticResource/Theme2/Js/jquery-1.10.2.min.js"></script>
+		<script type="text/javascript" src="../../../StaticResource/Theme2/Js/jquery.cokie.min.js"></script>
+		<script src="../../../StaticResource/Theme2/Js/conwin.helper.js"></script>
+		<script type="text/javascript" src="../../../StaticResource/Theme2/Js/date/WdatePicker.js"></script>
+		<script src="../../../StaticResource/Theme2/Js/layui/layui.js" charset="utf-8"></script>
+		<script src="../../../StaticResource/Theme2/Js/login/common.js"></script>
+		<script src="../../../StaticResource/Theme2/Js/ma.js"></script>
+		<script src="Js/businessTransact.js"></script>
+		<script type="text/html" id="corpTpl">
+			<a href="/corp/detail.html?ins_code={{d.in_scode}}" class="layui-table-link">{{d.corp_name}}</a>
+		</script>
+		<script type="text/html" id="coachTpl">
+			<a href="/coachd.html?sid={{d.coach_num}}" class="layui-table-link">{{d.coach_name}}</a>
+		</script>
+		<script type="text/html" id="barDemo">
+			{{#  if(d.evaluate_flag ==0){ }}
+			<a  class="layui-btn layui-btn-danger layui-btn-mini" url-data='Appeal.html?id={{d.id}}&isAppeal=0' lay-event="appealJudge">查看学时</a>
+			<a class="layui-btn layui-btn-mini" href="CoachAppraise.html?coachNum={{d.coach_num}}&id={{d.id}}&trainPhase={{d.train_phase}}&stunum={{d.stunum}}" >教练员评价</a></a>	
+			{{#  } else { }}
+			<a  class="layui-btn layui-btn-danger layui-btn-mini" url-data='Appeal.html?id={{d.id}}&isAppeal=1' lay-event="appeal">查看学时</a>
+			<a class="layui-btn layui-btn-primary layui-btn-mini">已评价</a></a>	
+			{{#  } }}
+		</script>
+		<script type="text/html" id="compDetail">
+			<a  class="layui-btn layui-btn-mini" url-data='CompDetail.html?id={{d.id}}' lay-event="compDetail">详情</a></a>	
+		</script>
+		<script type="text/html" id="doAppraiseCoach">
+			<a class="layui-btn layui-btn-mini" href="CoachAppraise.html?coachNum={{d.coach_num}}&id={{d.id}}&trainPhase={{d.train_phase}}&stunum={{d.stunum}}&myType={{'myAppraise'}}" >去评价</a></a>	
+		</script>
+		<script type="text/html" id="doAppraiseCorp">
+			<a class="layui-btn layui-btn-mini" href="CorpAppraise.html?in_scode={{d.in_scode}}&id={{d.id}}&trainPhase={{d.train_phase}}&stunum={{d.stunum}}" >去评价</a></a>	
+		</script>
+		<script type="text/html" id="apprDetail">
+			<a  class="layui-btn layui-btn-mini" url-data='ApprDetail.html?id={{d.id}}' lay-event="apprDetail">详情</a></a>	
+		</script>
+	</body>
+</html>
