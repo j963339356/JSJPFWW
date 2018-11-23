@@ -1,3 +1,5 @@
+
+var CwHelper = {}, overTimes = 1000 * 60 * 120;
 var SystemConfig = {
     SysId: 'D8B243FF-8194-4C45-8653-8777596231B0',
     AppId: '60E6CD47-1D26-4BC0-8B08-D85A8BDEFBE4',
@@ -13,15 +15,16 @@ var SystemConfig = {
     ServerAgent: "http://10.0.64.249:7007/api/ServiceGateway/DataService",
     ServiceCodeTable: [
         {code: "00000030011", ver: '1.0', url: "http://10.0.64.249:7005/ValidCode"},
-        {code: "00000030012", ver: '1.0', url: "#"}
+		{ code: "00000080004", ver: '1.0', url: "http://10.0.64.249:7007/api/ServiceGateway/GetFile" }
     ]
 };
-var CwHelper = {}, overTimes = 1000 * 60 * 120;
+
+CwHelper.SystemConfig = SystemConfig;
 
 CwHelper.AjaxData = function (request, body, ajax) {
 
     var token = "";
-
+    token = CwHelper.GetToken();
     if (!request && $.trim(request.servicecode) == "") {
         throw CwHelper.ErrorMessage.ERROR0003;
     }
@@ -62,8 +65,8 @@ CwHelper.AjaxData = function (request, body, ajax) {
         contentType: "application/x-www-form-urlencoded",
         dataType: 'json',
         headers: {
-            // "token": CwHelper.GetToken(),
-            "token": "9d8cf236-94ae-469a-b9f3-b726a031651e",
+            //"token": CwHelper.GetToken(),
+            "token": "6800343e-32a5-48bd-adaa-0f0b7213b33d",
             "Source-Type": "76d5f6283a57b2db",
             "Access-Control-Allow-Origin": "*",
             "Access-Control-Allow-Headers": "X-Requested-With"
@@ -101,8 +104,8 @@ CwHelper.Ajax = function (request, body, ajax, login) {
 
     var token = "";
     if (login !== false) {
-        // token = CwHelper.GetToken();
-        token = "9d8cf236-94ae-469a-b9f3-b726a031651e";
+        //token = CwHelper.GetToken();
+        token = "6800343e-32a5-48bd-adaa-0f0b7213b33d";
         if (token == "" || CwHelper.IsTokenTimeOut()) {
             //CwHelper.Login();
             return;
@@ -116,8 +119,11 @@ CwHelper.Ajax = function (request, body, ajax, login) {
 
 //???COOKIE????OKEN
 CwHelper.GetToken = function () {
-    var token = $.trim($.cookie('token'));
-    return token;
+	try	{
+		return $.trim($.cookie('token'));
+	}catch(err){
+		return "";
+	}
 }
 
 CwHelper.IsTokenTimeOut = function () {

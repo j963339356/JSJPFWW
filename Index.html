@@ -1,31 +1,39 @@
 <!doctype html>
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
-    <meta charset="utf-8" />
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta charset="utf-8">
 <title>广东省驾驶培训公众服务网</title>
 <link rel="stylesheet" href="StaticResource/Theme2/css/style.css" type="text/css">
+<style type="text/css">
+.header_ct{
+	margin-bottom: 10px;
+}
+</style>
 </head>
 <body class="bjs">
 <!--头部-->
 <header>
-	<div class="nav">
+<div class="nav">
 		<div class="nav_in">
 			<h1><img src="StaticResource/Theme2/Img/bg.png" alt=""></h1>
 			<div class="mz">
 				<p>广东省驾驶培训公众服务网</p>
 				<p>Guangdong driving and training public service network</p>
-			</div>        
+			</div>     
+			
 			<div class="login_in">
-				<div class="The-login"><a href="Modules/JPJSGZFW/Student/StudentLogin.html">学员服务</a></div>
+				<!--<div class="The-login"><a href="Modules/JPJSGZFW/Student/StudentLogin.html">学员服务</a></div>
 				<div class="The-login"><a href="#">驾校服务</a></div>
-				<div class="The-login"><a href="#">管理部门登录</a></div>
+				<div class="The-login"><a href="#">管理部门登录</a></div>-->
 			</div>
+			<div class="login_already" style="display: none;width: 300px; height: 53px; float:right; ">
+				<div style="display: inline-block; margin-top: 25px;font-size: 15px;">
+					欢迎您：
+					<a href="#"><span style="font-weight: bold; color:#000000;" id='user_name'>李世民</span></a>
+				</div>
+				<div class="The-login" onclick="inValidate()"><a href="#">退出登录</a></div>
+			</div>		
+			
 		</div>
 		<div class="nav_b">
 			<ul id="nav_content">
@@ -43,13 +51,16 @@
 				<li><a href="Modules/JPJSGZFW/Info/BusinessGuide.html">业务指南</a></li>
 			</ul>
 		</div>
-	</div>
+</div>
 </header>
 
 <!--头部-->
 <div class="header">
 	<div class="header_in">
-		<div class="header_l"><p>广东省转发公安厅交通运输厅</p></div>
+		<div class="header_l">
+			<a href="Index.html"><img src="StaticResource/Theme2/Img/s2.jpg" style="width:346px;height:300px;overflow: hidden;"/></a>
+			<p>广东省转发公安厅交通运输厅</p>
+		</div>
 		<div class="header_c gonggao">
 	    	<div class="header_ct">
 	        	<h2 class="ywzn">通知公告</h2>
@@ -216,10 +227,9 @@
 <!--底部-->
 <script type="text/javascript" src="StaticResource/Theme2/Js/jquery-1.8.2.min.js"></script>
 <script type="text/javascript" src="StaticResource/Theme2/Js/jquery.cokie.min.js"></script>
-<script type="text/javascript" src="StaticResource/Theme2/Js/layer/layer.js"></script>
 <script type="text/javascript" src="StaticResource/Theme2/Js/conwin.helper.js"></script>
+<script type="text/javascript" src="StaticResource/Theme2/Js/layer/layer.js"></script>
 <script type="text/javascript" src="Modules/JPJSGZFW/Info/Js/Index.js"></script>
-
-</script>
+<script type="text/javascript" src="Modules/JPJSGZFW/Info/Js/IsLogin.js"> </script>
 </body>
 </html>

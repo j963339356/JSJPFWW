@@ -1,0 +1,129 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>政策法规</title>
+<link rel="stylesheet" href="../../../StaticResource/Theme2/Css/style.css" type="text/css">
+<style type="text/css">
+.pagespan:hover{
+	cursor:pointer;
+	opacity:1;
+}
+.notice_in p{	
+	margin-bottom: 12px;
+}
+</style>
+</head>
+<body style="height: 800px;">
+<!--头部-->
+<header>
+	<div class="nav">
+		<div class="nav_in">
+			<h1><img src="../../../StaticResource/Theme2/Img/bg.png" alt=""></h1>
+			<div class="mz">
+				<p>广东省驾驶培训公众服务网</p>
+				<p>Guangdong driving and training public service network</p>
+			</div>        
+			<div class="login_in">
+				<!--<div class="The-login"><a href="../Student/StudentLogin.html">学员服务</a></div>
+				<div class="The-login"><a href="#">驾校服务</a></div>
+				<div class="The-login"><a href="#">管理部门登录</a></div>-->
+			</div>
+			<div class="login_already" style="display: none;width: 300px; height: 53px; float:right; ">
+				<div style="display: inline-block; margin-top: 25px;font-size: 15px;">
+					欢迎您：
+					<a href="#"><span style="font-weight: bold; color:#000000;" id='user_name'>李世民</span></a>
+				</div>
+				<div class="The-login" onclick="inValidate()"><a href="#">退出登录</a></div>
+			</div>	
+		</div>
+		<div class="nav_b">
+			<ul id="nav_content">
+				<li class="current"><a href="../../../Index.html">首页</a></li>
+				<li><a href="Statute.html">政策法规</a></li>
+				<li><a href="">驾校信息公开</a>
+					<ul class="lst">  
+						<li><a href="../Institutions/ServiceNavigation.html">服务导航</a></li>
+						<li><a href="../Institutions/Institutions.html">驾校查询</a></li>
+						<li><a href="../Institutions/Coaches.html">教练员查询</a></li>
+						<li><a href="../Institutions/CoachCar.html">教练车查询</a></li>
+					</ul>    			
+				</li>	
+				<li><a href="News.html">通知公告</a></li>
+				<li><a href="BusinessGuide.html">业务指南</a></li>
+			</ul>
+		</div>
+	</div>
+</header>
+<!--头部-->
+<div class="notice" style="height: 571px;">
+	<div class="header_c" style="height: 531px;">
+    	<div class="notice_in">
+        	<p><a href="../../../Index.html">首页</a>><a href="Statute.html">政策法规</a></p>
+        </div>
+    	<div class="header_cb">
+    		<input type="hidden" id="statute_items" value="16"/>
+        	<ul id="statute_ul">
+<!--        		
+	        		<li><a href="Detail.html?typeId=2&newsId=43">Test20180403政策法规信息发布00</a><span>2018-04-03</span></li>
+        		
+	        		<li><a href="Detail.html?typeId=2&newsId=26">测试重要性与时间排序</a><span>2017-11-07</span></li>
+
+					<li style="background: none;"><a href="#">&nbsp;<span>&nbsp;</span></a></li>
+				
+					<li style="background: none;"><a href="#">&nbsp;<span>&nbsp;</span></a></li>-->
+				
+        	</ul>
+        </div>
+    </div>
+    <div class="flip"> 
+		<lable id="page_tag">当前：<label id="pageIndex"></label>/<label id="totalPages"></label></lable>
+		<a href="javascript:void(0);"><span class="pagespan" id="first_page">首页</span></a>
+		<a href="javascript:void(0);"><span class="pagespan" id="backforward">上一页</span></a>
+		<a href="javascript:void(0);"><span class="pagespan" id="page">1<label id="pageNo"></label></span></a>
+		<a href="javascript:void(0);"><span class="pagespan" id="forward">下一页</span></a>
+		<a href="javascript:void(0);"><span class="pagespan" id="last_page">尾页</span></a>
+		<span class="pagespan">
+			<input type="text" id="page_num" style="width:20px"></span>页
+			<a href="javascript:void(0);">
+		<span class="pagespan" id="change_page">跳转</span></a>
+	</div>
+    <!--<input type="hidden" id="total" value="981"/>
+    <input type="hidden" id="pageCount" value="109"/>
+    <input type="hidden" id="pageSize" value="9"/>
+    <input type="hidden" id="pageIndex" value="1"/>-->
+</div>
+<!--底部-->
+<footer>
+    <div class="footer">
+		<div class="footer_in">
+			<div class="lianjie">
+				<h2>友情链接</h2>
+				<ul>
+					<li><a href="http://www.mot.gov.cn/" target="_blank">中华人民共和国交通运输部</a></li>
+					<li><a href="http://www.mps.gov.cn/" target="_blank">中华人民共和国公安部</a></li>
+					<li><a href="http://gd.122.gov.cn/" target="_blank">交通安全综合服务管理平台</a></li>
+					<li><a href="https://www.cttic.cn/" target="_blank">中国交通通信信息中心</a></li>
+					<li><a href="http://www.crta.org.cn/" target="_blank">中国道路运输协会</a></li>
+				</ul>
+				<p>版权所有<br>© copyright 2010-2018. All rights reserved. 粤ICP备15023105号</p>
+			</div>
+			<div class="erweima">
+				<img src="../../../StaticResource/Theme2/Img/erweima.png" width="100" height="102" alt="">
+				<p>扫一扫<br>关注微信公众号</p>
+			</div>
+		</div>
+	</div>
+</footer>
+<!--底部 jquery.cokie.min.js-->
+<script type="text/javascript" src="../../../StaticResource/Theme2/js/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="../../../StaticResource/Theme2/Js/jquery.cokie.min.js"></script>
+<script type="text/javascript" src="../../../StaticResource/Theme2/Js/conwin.helper.js"></script>
+<script type="text/javascript" src="../../../StaticResource/Theme2/js/select.js"></script>
+<script type="text/javascript" src="../../../StaticResource/Theme2/js/dateRange.js"></script>
+<script type="text/javascript" src="../../../StaticResource/Theme2/js/date/WdatePicker.js"></script>
+<script type="text/javascript" src="../../../StaticResource/Theme2/js/layer/layer.js"></script>
+<script type="text/javascript" src="Js/Statute.js"></script>
+<script type="text/javascript" src="Js/IsLogin.js"></script>
+</body>
+</html>
